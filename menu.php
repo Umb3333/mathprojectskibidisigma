@@ -3,5 +3,7 @@
 </div>
 
 <div class="difficultyButtons">
-    <li> <button> <a href="easy.html"> Easy </a></button></li>
+    <li> <button> <a href="easy.php"> Easy </a></button>
+        <button> <a href="medium.php"> Medium </a></button>
+        <button> <a href="hard.php"> Hard </a></button></li>
 </div>

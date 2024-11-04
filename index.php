@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
- <?php include('menu.html') ?>
+ <?php include('menu.php') ?>
 </body>
 </html>
