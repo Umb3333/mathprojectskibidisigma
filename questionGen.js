@@ -1,6 +1,6 @@
-import math from "mathjs";
 
-document.getElementsByClassName("question")[0].innerHTML = questions[0];
+
+document.getElementsByClassName("question")[0].innerHTML = question[0];
 document.getElementsByClassName("questionnumber")[0].innerHTML = "Question 1";
 document.getElementsByClassName("input1")[0].placeholder = "Answer";
 
@@ -10,8 +10,8 @@ function randomArithmetic() {
     return operations[randomIndex];
   }
   function questionGen() {
-    const num1 = Math.floor(Math.random() * 10);
-    const num2 = Math.floor(Math.random() * 10);
+    const num1 = Math.random(1, 1000);
+    const num2 = Math.random(1, 1000);
     const operation = randomArithmetic();
     const question = `What is ${num1} ${operation} ${num2}?`;
     const answer = eval(`${num1} ${operation} ${num2}`);
