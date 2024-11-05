@@ -9,7 +9,7 @@ submit.addEventListener("click", submitAnswer);
 function submitAnswer() {
   // this function checks if the answer is correct
   if (input.value == answer) {
-    alert("Correct!");
+    questionnumber.textContent = `Question ${questionnumber.textContent.slice(8, 10)}`;
     questionGen(); }
   else {
     document.querySelector(".questiondiv").animate([
