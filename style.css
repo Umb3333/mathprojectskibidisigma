@@ -4,9 +4,9 @@ body {
 
 }
 
-.difficultyButton button a {
+button.startbtn {
     text-decoration: none;
-    
+    padding: 20px;
 }
 
 /* Easy mode */
