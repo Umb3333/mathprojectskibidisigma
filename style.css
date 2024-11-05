@@ -104,6 +104,14 @@ body {
     font-size: 30px;
 }
 
+.questiondiv h3 {
+    font-size: 28px; 
+}
+
+.questiondiv h4 {
+    font-size: 25px;
+}
+
 .input1 
 {
  justify-content: left;

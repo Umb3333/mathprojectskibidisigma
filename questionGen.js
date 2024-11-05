@@ -4,6 +4,29 @@ const input = document.querySelector(".input1");
 const submit = document.querySelector(".submit");
 const questionnumber = document.querySelector(".questionnumber");
 
+
+submit.addEventListener("click", submitAnswer);
+function submitAnswer() {
+  // this function checks if the answer is correct
+  if (input.value == answer) {
+    alert("Correct!");
+    questionGen(); }
+  else {
+    document.querySelector(".questiondiv").animate([
+      // key frames
+      { transform: 'translateX(0px)' },
+      { transform: 'translateX(-300px)' },
+      { transform: 'translateX(300px)' },
+      { transform: 'translateX(0px)' }
+    ], {
+      // sync options
+      duration: 1.2,
+      iterations: 2
+  
+    });
+  } 
+}
+
 function randomArithmetic() {
   // this function randomly selects an operation from the array.
     const operations = ["+", "-", "*", "/"];
@@ -23,7 +46,9 @@ function randomArithmetic() {
     const operation = randomArithmetic();
     const question = `What is ${num1} ${operation} ${num2}?`;
     //  Holds the answer to the question. (duh)
-    const answer = eval(`${num1} ${operation} ${num2}`);
+    const answerBeforeRound =  eval(`${num1} ${operation} ${num2}`);
+    const answerAfterRound = Math.round(answerBeforeRound * 100) / 100;
+    answer = answerAfterRound;
 
     document.querySelector(".question").textContent = question;
     
