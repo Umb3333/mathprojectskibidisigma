@@ -32,6 +32,8 @@ body {
     margin-right: auto;
     margin-top: 20px;
     display: block;
+    outline-style: solid;
+    outline-width: 3px;
     text-decoration: none;
     padding: 20px;
     font-size: 30px;
@@ -48,5 +50,26 @@ body {
 
 
 /* Hard mode */
+
+.title
+ {
+    position: relative;
+    margin-top: auto;
+    margin-left: auto;
+  margin-right: auto;
+    font-size: 30px;
+    text-align: center;
+    max-width: 800px;
+    max-height: 400px;
+    outline-style: solid;
+    outline-color: rgb(0, 0, 0);
+    outline-width: 2px;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Bangers', sans-serif;
+    background-color: rgb(205, 241, 137);
+    color: rgb(0, 0, 0);
+}
+
 
 /*ARSCHNY BOSS BATTLE */ 
