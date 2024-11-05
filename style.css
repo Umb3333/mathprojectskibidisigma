@@ -4,6 +4,10 @@ body {
 
 }
 
+.difficultyButton button a {
+    text-decoration: none;
+    
+}
 
 /* Easy mode */
 

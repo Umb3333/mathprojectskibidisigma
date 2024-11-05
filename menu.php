@@ -1,9 +1,12 @@
+<head><link rel="stylesheet" href="style.css"></head>
 <div class="menutext">
-    <h1>Math practice!!</h1>
+    <h1>Numberland Adventures</h1>
 </div>
 
 <div class="difficultyButtons">
-    <li> <button> <a href="easy.php"> Easy </a></button>
-        <button> <a href="medium.php"> Medium </a></button>
-        <button> <a href="hard.php"> Hard </a></button></li>
+    <style>button{text-decoration: none;}</style>
+    <li > 
+        <button><a class="buttons" href="easy.php"> Easy </a> </button>
+        <button><a class="buttons" href="medium.php"> Medium </a></button>
+        <button><a class="buttons" href="hard.php"> Hard </a></button></li>
 </div>
