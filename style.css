@@ -4,7 +4,7 @@ body {
 
 }
 
-button.startbtn {
+#startbtn {
     text-decoration: none;
     padding: 20px;
 }
