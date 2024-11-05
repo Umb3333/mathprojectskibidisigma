@@ -59,8 +59,8 @@ body {
   margin-right: auto;
     font-size: 30px;
     text-align: center;
-    max-width: 800px;
-    max-height: 400px;
+    max-width: 900px;
+    max-height: 500px;
     outline-style: solid;
     outline-color: rgb(0, 0, 0);
     outline-width: 2px;
@@ -73,9 +73,12 @@ body {
 
 .questiondiv
  {
+    animation-duration: 4s;
+    animation-name: verticalwobble;
+    animation-iteration-count: infinite;
  background-color: rgb(238, 238, 238);
  margin: 10px;
- padding: 20px;
+ padding: 40px;
  outline-style: solid;
  outline-width: 3px;
  max-width: 600px;
@@ -85,8 +88,43 @@ body {
  border-radius: 4px;
 }
 
+@keyframes verticalwobble {
+    0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+}
+
 .questiondiv h2 {
     font-size: 30px;
 }
+
+.input1 
+{
+ justify-content: left;
+    width: 40%;
+    height: 40px;
+    font-size: 30px;
+    text-align: left;
+    border-radius: 10px;
+    scale: 1;
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+.submit
+{
+    background-color: rgb(205, 241, 137);
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    border-radius: 10px;
+    scale: 1;   
+}
+
 
 /*ARSCHNY BOSS BATTLE */ 
