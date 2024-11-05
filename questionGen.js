@@ -9,15 +9,17 @@ submit.addEventListener("click", submitAnswer);
 function submitAnswer() {
   // this function checks if the answer is correct
   if (input.value == answer) {
-    questionnumber.textContent = `Question ${questionnumber.textContent.slice(8, 10)}`;
+    const currentQuestionNumber = parseInt(questionnumber.textContent.slice(8, 10));
+    const newQuestionNumber = currentQuestionNumber + 1;
+     questionnumber.textContent = `Question ${newQuestionNumber}`;
     questionGen(); }
   else {
     document.querySelector(".questiondiv").animate([
       // key frames
-      { transform: 'translateX(0px)' },
-      { transform: 'translateX(-300px)' },
-      { transform: 'translateX(300px)' },
-      { transform: 'translateX(0px)' }
+      { transform: 'translateX(0%)' },
+      { transform: 'translateX(-100%)' },
+      { transform: 'translateX(100%)' },
+      { transform: 'translateX(0%)' }
     ], {
       // sync options
       duration: 1.2,
