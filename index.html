@@ -25,23 +25,30 @@
     </div>
 
     <div class="optionsdropdown">
-        <button class="option-button">Options</button>
-        <div class="dropdown content" aria-label="Settings-dropdown">
-
-
-
-        </div>
-            <label for="Voiceover-toggle">
-                  <span class="toggle-switch">
-                    <input type="checkbox"  id="Voiceover-toggle">
+        <button class="options-button">Options</button>
+        <div class="dropdown-content" aria-label="Settings Dropdown">
+            <label for="voiceover-toggle">
+                <span class="toggle-switch">
+                    <input type="checkbox" id="voiceover-toggle">
                     <span class="slider"></span>
-                  </span>
-                    
+                </span>
             </label>
-                
-
-
+        </div>
     </div>
+
+
+    <script>
+        
+        document.getElementById('voiceover-toggle').addEventListener('change', function () {
+            if (this.checked) {
+                
+                console.log('Voiceover Mode Enabled');
+            } else {
+               
+                console.log('Voiceover Mode Disabled');
+            }
+        });
+    </script>
 
 </body>
 </html>
