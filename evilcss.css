@@ -1,5 +1,6 @@
 body {
     background-color: black;
+    font-family:  'Determination Mono', sans-serif;
 }
 
 .zionplayer
@@ -16,7 +17,20 @@ body {
     outline-width: 2px;
     padding: 10px;
     border-radius: 10px;
-    font-family: 'Bangers', sans-serif;
+    font-family:  'Determination Mono', sans-serif;
     
     color: rgb(0, 0, 0);
+}
+
+.dialogtextOther 
+{
+    font-family:  'Determination Mono', sans-serif;
+    color: rgb(197, 118, 28);
+    outline-style: solid;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 800px;
+    max-height: 400px;
+    padding: 30px;
 }
