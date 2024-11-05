@@ -134,6 +134,9 @@ body {
     scale: 1;   
 }
 
+.wrong-answer {
+    background-color: red;
+  }
 
 /*ARSCHNY BOSS BATTLE */ 
 

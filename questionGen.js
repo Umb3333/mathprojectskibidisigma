@@ -17,18 +17,10 @@ function submitAnswer() {
     }
     questionGen(); }
   else {
-    document.querySelector(".questiondiv").animate([
-      // key frames
-      { transform: 'translateX(0%)' },
-      { transform: 'translateX(-100%)' },
-      { transform: 'translateX(100%)' },
-      { transform: 'translateX(0%)' }
-    ], {
-      // sync options
-      duration: 1.2,
-      iterations: 2
-  
-    });
+    submit.classList.add('wrong-answer');
+  setTimeout(() => {
+    submit.classList.remove('wrong-answer');
+  }, 1500);
   } 
 }
 
