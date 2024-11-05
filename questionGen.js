@@ -20,7 +20,7 @@ function submitAnswer() {
     submit.classList.add('wrong-answer');
   setTimeout(() => {
     submit.classList.remove('wrong-answer');
-  }, 1500);
+  }, 12800);
   } 
 }
 
