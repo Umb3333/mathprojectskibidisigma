@@ -12,7 +12,7 @@ function submitAnswer() {
     const currentQuestionNumber = parseInt(questionnumber.textContent.slice(8, 10));
     const newQuestionNumber = currentQuestionNumber + 1;
      questionnumber.textContent = `Question ${newQuestionNumber}`;
-    if (newQuestionNumber > 10) {
+    if (newQuestionNumber > 2) {
       window.location.replace("zionboss.html");
     }
     questionGen(); }
@@ -20,7 +20,7 @@ function submitAnswer() {
     submit.classList.add('wrong-answer');
   setTimeout(() => {
     submit.classList.remove('wrong-answer');
-  }, 12800);
+  }, 1200);
   } 
 }
 
