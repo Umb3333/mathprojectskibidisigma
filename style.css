@@ -188,9 +188,11 @@ body {
 
 
 .toggle-switch {
-  position: relative;
+  position: absolute;
+  top: 20px;
+  right: 20px;
   display: inline-block;
-  width: 34px;
+  width: 20px;
   height: 20px;
   margin-left: 10px;
 }
