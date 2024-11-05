@@ -27,26 +27,28 @@ function typewritergabagool(element, text, i = 0)
     typewritergabagool(div, text);
 
     const fightButton = document.querySelector('.fight');
-const dialogTextOther = document.querySelector('.dialogtextOther');
-const fightUI = document.querySelector('.fight-ui');
-
-fightButton.addEventListener('click', () => {
-    if (fightUI.style.display === 'none') {
-        dialogTextOther.innerHTML = '';
-        dialogTextOther.appendChild(nerdButton);
-        fightUI.style.display = 'block';
-    } else {
-        nerdButton.remove();
-        fightUI.style.display = 'none';
+    const dialogTextOther = document.querySelector('.dialogtextOther');
+    const fightUI = document.querySelector('.fight-ui');
+    const nerdButton = document.querySelector('.nerd-button');
+    const playerhealth = document.getElementById("playerhealth");
+    
+    fightButton.addEventListener('click', () => {
+        if (fightUI.style.display === 'none') {
+            dialogTextOther.innerHTML = '';
+            dialogTextOther.appendChild(nerdButton);
+            fightUI.style.display = 'block';
+        } else {
+            nerdButton.remove();
+            fightUI.style.display = 'none';
+        }
+    });
+    
+    nerdButton.addEventListener('click', () => {
+        let damage = enemyAttack(playerhealth); // Pass playerhealth to enemyAttack
+    });
+    
+    function enemyAttack(playerhealth) {
+        let damage = parseFloat(Math.floor(Math.random() * 25) + 1);
+        playerhealth.value -= damage;
+        return damage;
     }
-});
-
-const nerdButton = document.querySelector('.nerd-button');
-
-nerdButton.addEventListener('click', () => {
-    // TODO: Add functionality for the "Nerd" button
-});
-
-// HEALTHBAR AND ENEMY HEALTH
-const canvas = document.querySelector('.hpCanvas');
-const context = canvas.getContext('2d');
