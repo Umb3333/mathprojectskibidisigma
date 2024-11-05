@@ -12,20 +12,15 @@ function submitAnswer() {
     const currentQuestionNumber = parseInt(questionnumber.textContent.slice(8, 10));
     const newQuestionNumber = currentQuestionNumber + 1;
      questionnumber.textContent = `Question ${newQuestionNumber}`;
+    if (newQuestionNumber > 10) {
+      window.location.replace("zionboss.html");
+    }
     questionGen(); }
   else {
-    document.querySelector(".questiondiv").animate([
-      // key frames
-      { transform: 'translateX(0%)' },
-      { transform: 'translateX(-100%)' },
-      { transform: 'translateX(100%)' },
-      { transform: 'translateX(0%)' }
-    ], {
-      // sync options
-      duration: 1.2,
-      iterations: 2
-  
-    });
+    submit.classList.add('wrong-answer');
+  setTimeout(() => {
+    submit.classList.remove('wrong-answer');
+  }, 1500);
   } 
 }
 
@@ -49,7 +44,9 @@ function randomArithmetic() {
     const question = `What is ${num1} ${operation} ${num2}?`;
     //  Holds the answer to the question. (duh)
     const answerBeforeRound =  eval(`${num1} ${operation} ${num2}`);
-    const answerAfterRound = Math.round(answerBeforeRound * 100) / 100;
+    const answerAfterRound = answerBeforeRound.toFixed(1);
+    // for debugging/testing
+    console.log(answerAfterRound);
     answer = answerAfterRound;
 
     document.querySelector(".question").textContent = question;

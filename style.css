@@ -88,7 +88,7 @@ body {
  border-radius: 4px;
 }
 
-/*@keyframes verticalwobble {
+@keyframes verticalwobble {
     0% {
         transform: translateY(0);
       }
@@ -98,7 +98,7 @@ body {
       100% {
         transform: translateY(0);
       }
-} */
+} 
 
 .questiondiv h2 {
     font-size: 30px;
@@ -134,6 +134,9 @@ body {
     scale: 1;   
 }
 
+.wrong-answer {
+    background-color: red;
+  }
 
 /*ARSCHNY BOSS BATTLE */ 
 
