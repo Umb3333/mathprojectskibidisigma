@@ -141,7 +141,7 @@ body {
 /*ARSCHNY BOSS BATTLE */ 
 
 
-/* options meny*/
+/* options menu*/
 .optionsdropdown {
   position: fixed;
   top: 20px;
@@ -170,7 +170,7 @@ body {
     top: 50px;
     right: 0;
     background-color: white; 
-    min-width: 250px;
+    min-width: 100px;
     max-width: 3350px;
     min-height: 75px;
     max-height: 100px;
