@@ -27,7 +27,7 @@ function playAudio() {
       |___/|_|                                                                  
                                                                                 
                                                                                 */
-const div = document.querySelector('.dialogtextOther p');
+const div = document.querySelector('.dialogtextOther');
 const text = div.textContent;
 function typewritergabagool(element, text, i = 0) 
 {
@@ -68,10 +68,10 @@ function typewritergabagool(element, text, i = 0)
             fightUI.style.display = 'none';
         }
     });
-    const question = document.querySelector(".question");
+    const question = document.querySelector(".dialogtextother h3");
         nerdButton.addEventListener('click', () => {
         let question = questionGen();
-        dialogTextOther.innerHTML = (question);
+        question.textContent = questionGen();
         nerdButton.disabled = true;
     });
 
@@ -108,14 +108,19 @@ function typewritergabagool(element, text, i = 0)
         const num3 = Math.floor(Math.random() * 100);
         
         const operation = randomArithmetic();
-        const question = `What is ${num1} ${operation} ${num2}?`;
+        const questionprint = `What is ${num1} ${operation} ${num2}?`;
         //  Holds the answer to the question. (duh)
         const answerBeforeRound =  eval(`${num1} ${operation} ${num2}`);
         const answerAfterRound = answerBeforeRound.toFixed(1);
         // for debugging/testing
         answer = parseFloat(answerAfterRound);
         console.log(answer);
-      }
+        
+        typewritergabagool(div, text);
+        document.querySelector(".dialogtextOther").textContent = questionprint;
+        
+    }
+      
       if (balls == true)
         {
             imagechange();
@@ -151,9 +156,7 @@ function typewritergabagool(element, text, i = 0)
         function submitAnswer() {
           // this function checks if the answer is correct
           if (input.value == answer) {
-            const currentQuestionNumber = parseInt(questionnumber.textContent.slice(8, 10));
-            const newQuestionNumber = currentQuestionNumber + 1;
-             questionnumber.textContent = `Question ${newQuestionNumber}`;
+            
             
             questionGen(); }
           else {

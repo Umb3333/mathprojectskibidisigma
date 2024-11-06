@@ -146,7 +146,16 @@ animation-iteration-count: infinite;
 .nerd-button:hover {
     background-color: #583411;
 }
-
+.playerhealth 
+{
+  right: 20%;
+  width: 30%;
+  height: 4%;
+  margin-left: auto;
+  margin-right: 15%;
+  top: 105%;   
+  position: absolute;
+}
 .enemyhealth
 {
     width: 70%;
@@ -177,4 +186,16 @@ progress::-webkit-progress-value {
     margin-right: auto;
     position: relative;
     top: 100px;
+}
+
+.input1 {
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Determination Mono', sans-serif;
+    color: rgb(197, 118, 28);
+    outline-style: solid;
+    outline-width: 6px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
