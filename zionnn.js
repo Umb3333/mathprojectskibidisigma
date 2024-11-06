@@ -56,7 +56,7 @@ function typewritergabagool(element, text, i = 0)
     const dialogTextOther = document.querySelector('.dialogtextOther');
     const fightUI = document.querySelector('.fight-ui');
     const nerdButton = document.querySelector('.nerd-button');
-    const playerhealth = document.getElementById("playerhealth");
+    const playerhealth = document.querySelector(".playerhealth");
     
     fightButton.addEventListener('click', () => {
         if (fightUI.style.display === 'none') {
@@ -76,10 +76,16 @@ function typewritergabagool(element, text, i = 0)
     });
     
 
-    function enemyAttack(playerhealth) {
+    function enemyAttack() {
         let damage = parseFloat(Math.floor(Math.random() * 25) + 1);
         playerhealth.value -= damage;
         return damage;
+    }
+    
+    function attackenemy() {
+      let damage = parseFloat(Math.floor(Math.random() * 25) + 1);
+      document.querySelector(".enemyhealth").value -= damage;
+      console.log(damage);
     }
 
     /* Question Gen */
