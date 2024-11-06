@@ -169,7 +169,7 @@ body {
     position: absolute;
     top: 50px;
     right: 0;
-    background-color: white; 
+    background-color: white;
     min-width: 100px;
     max-width: 3350px;
     min-height: 75px;
@@ -177,6 +177,7 @@ body {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     z-index: 1;
+    display: block;
     padding: 10px;
     font-family: 'Poppins', sans-serif;
 }

@@ -1,3 +1,14 @@
+/* 
+                    _ _               _                       
+     /\            | (_)             | |                      
+    /  \  _   _  __| |_  ___    _ __ | | __ _ _   _  ___ _ __ 
+   / /\ \| | | |/ _` | |/ _ \  | '_ \| |/ _` | | | |/ _ \ '__|
+  / ____ \ |_| | (_| | | (_) | | |_) | | (_| | |_| |  __/ |   
+ /_/    \_\__,_|\__,_|_|\___/  | .__/|_|\__,_|\__, |\___|_|   
+                               | |             __/ |          
+                               |_|            |___/           
+*/
+
 function playAudio() {
     var audio = new Audio('deathbyGLAMOUR.mp3');
     audio.play();
@@ -47,6 +58,7 @@ function typewritergabagool(element, text, i = 0)
         let damage = enemyAttack(playerhealth); // Pass playerhealth to enemyAttack
     });
     
+
     function enemyAttack(playerhealth) {
         let damage = parseFloat(Math.floor(Math.random() * 25) + 1);
         playerhealth.value -= damage;
