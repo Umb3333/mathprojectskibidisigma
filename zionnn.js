@@ -68,13 +68,15 @@ function typewritergabagool(element, text, i = 0)
             fightUI.style.display = 'none';
         }
     });
-    
-    nerdButton.addEventListener('click', () => {
+    const question = document.querySelector(".question");
+        nerdButton.addEventListener('click', () => {
         let question = questionGen();
         dialogTextOther.textContent = question;
         nerdButton.disabled = true;
     });
+
     
+     balls = true;
 
     function enemyAttack() {
         let damage = parseFloat(Math.floor(Math.random() * 25) + 1);
@@ -104,10 +106,25 @@ function typewritergabagool(element, text, i = 0)
         // for debugging/testing
         answer = parseFloat(answerAfterRound);
         console.log(answer);
-    
-        document.querySelector(".question").textContent = question;
+        
+        
+        
+        
         
       }
+      if (balls == true)
+        {
+            imagechange();
+        }
+      function imagechange() {
+        const images = ["aergg.png", "fuckyou.png"];
+        const imageElement = document.querySelector(".zion");
+        
+        setInterval(() => {
+            const randomimage = Math.floor(Math.random() * images.length);
+            imageElement.src = images[randomimage];
+        }, 2000);
+    }
 
       function randomArithmetic() {
         // this function randomly selects an operation from the array.
@@ -116,8 +133,8 @@ function typewritergabagool(element, text, i = 0)
           const randomIndex = Math.floor(Math.random() * operations.length);
           return operations[randomIndex];
         }
-        const submit = document.querySelector(".submit");
-        const question = document.querySelector(".question").textContent;
+        const submit = document.querySelector(".submit").textContent;
+        
         submit.addEventListener("click", submit);
 
 

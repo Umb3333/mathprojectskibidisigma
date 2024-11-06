@@ -30,6 +30,11 @@ body {
     color: rgb(0, 0, 0);
 }
 
+.zionplayer img {
+    
+    max-block-size: 0%;
+}
+
 .dialogtextOther 
 {
     display: flex;
@@ -142,13 +147,24 @@ animation-iteration-count: infinite;
     background-color: #583411;
 }
 
-.playerhealth {
-    position: absolute;
-    right: 45%;
-    top: 70%;
+progress {
+    color: rgb(255, 252, 57);
+    position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 10%;
-    height: 20px;
-    background-color: #ff0000;
-}
+  }
+  
+  progress::-moz-progress-bar {
+    background: rgb(248, 235, 55);
+  }
+  .enemyhealth progress::-moz-progress-bar {
+    background: rgb(55, 161, 248);
+  }
+  
+  progress::-webkit-progress-value {
+    background: red;
+  }
+  
+  progress::-webkit-progress-bar {
+    background: blue;
+  }
