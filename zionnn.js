@@ -71,7 +71,7 @@ function typewritergabagool(element, text, i = 0)
     
     nerdButton.addEventListener('click', () => {
         let question = questionGen();
-        nerdButton.textContent = question;
+        dialogTextOther.textContent = question;
         nerdButton.disabled = true;
     });
     
@@ -99,7 +99,7 @@ function typewritergabagool(element, text, i = 0)
         answer = parseFloat(answerAfterRound);
         console.log(answer);
     
-        document.querySelector("#question").textContent = question;
+        document.querySelector(".question").textContent = question;
         
       }
 
@@ -111,11 +111,11 @@ function typewritergabagool(element, text, i = 0)
           return operations[randomIndex];
         }
         const submit = document.querySelector(".submit");
-        const question = document.querySelector("#question").textContent;
+        const question = document.querySelector(".question").textContent;
         submit.addEventListener("click", submit);
 
 
-        
+
         function submitAnswer() {
           // this function checks if the answer is correct
           if (input.value == answer) {
