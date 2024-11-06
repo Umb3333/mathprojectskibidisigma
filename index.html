@@ -39,7 +39,14 @@
 
 
     <script>
-        
+        const optionsButton = document.querySelector('.options-button');
+        const dropdownHeader = document.querySelector('.dropdown-header');
+
+        optionsButton.addEventListener('click', () => {
+        dropdownHeader.classList.toggle('show');
+        });    
+
+
         document.getElementById('voiceover-toggle').addEventListener('change', function () {
             if (this.checked) {
                 

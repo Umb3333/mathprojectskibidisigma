@@ -16,7 +16,15 @@ function playAudio() {
         this.play();
     }
 }
-// typewriter effect
+/*   
+  _   _                              _ _                    __  __          _   
+ | | (_)                            (_) |                  / _|/ _|        | |  
+ | |_ _ _ __ ___   _____      ___ __ _| |_ ___ _ __    ___| |_| |_ ___  ___| |_ 
+ | __| | '_ ` _ \ / _ \ \ /\ / / '__| | __/ _ \ '__|  / _ \  _|  _/ _ \/ __| __|
+ | |_| | | | | | |  __/\ V  V /| |  | | ||  __/ |    |  __/ | | ||  __/ (__| |_ 
+  \__|_|_| |_| |_|\___| \_/\_/ |_|  |_|\__\___|_|     \___|_| |_| \___|\___|\__|
+                                                                                
+                                                                                */
 const div = document.querySelector('.dialogtextOther p');
 const text = div.textContent;
 function typewritergabagool(element, text, i = 0) 
@@ -36,6 +44,11 @@ function typewritergabagool(element, text, i = 0)
     }
     
     typewritergabagool(div, text);
+
+
+/* 
+
+*/
 
     const fightButton = document.querySelector('.fight');
     const dialogTextOther = document.querySelector('.dialogtextOther');

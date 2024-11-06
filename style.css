@@ -114,7 +114,7 @@ body {
 
 .input1 
 {
- justify-content: left;
+    
     width: 40%;
     height: 40px;
     font-size: 30px;
@@ -163,7 +163,7 @@ body {
   outline-width: 2px;
 }
 
-.dropdown-content {
+.dropdown-header {
   
     display: none;
     position: absolute;
@@ -177,18 +177,22 @@ body {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     z-index: 1;
-    display: block;
+    
     padding: 10px;
     font-family: 'Poppins', sans-serif;
 }
 
-
-
-.optionsdropdown:hover .dropdown-content {
+.dropdown-header.show {
   display: block;
 }
 
-.dropdown-content label {
+
+
+.optionsdropdown:hover .dropdown-header {
+  display: block;
+}
+
+.dropdown-header label {
   display: flex;
   align-items: center;
   color: black;
