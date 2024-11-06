@@ -54,7 +54,8 @@ function typewritergabagool(element, text, i = 0)
     }
 
     /* Question Gen */
-    function questionGen() {
+    function questionGen() 
+    {
         // this part generates the numbers for the problem.
         const num1 = Math.floor(Math.random() * 100);
         const num2 = Math.floor(Math.random() * 100);
@@ -72,5 +73,14 @@ function typewritergabagool(element, text, i = 0)
         document.querySelector(".question").textContent = question;
         
       }
+
+      function randomArithmetic() {
+        // this function randomly selects an operation from the array.
+          const operations = ["+", "-", "*", "/"];
+          //                  Rounds down ||  Random number || The amount of operations listed.
+          const randomIndex = Math.floor(Math.random() * operations.length);
+          return operations[randomIndex];
+        }
+      
     
       
