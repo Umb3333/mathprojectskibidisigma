@@ -71,11 +71,11 @@ function typewritergabagool(element, text, i = 0)
     const question = document.querySelector(".question");
         nerdButton.addEventListener('click', () => {
         let question = questionGen();
-        dialogTextOther.textContent = question;
+        dialogTextOther.innerHTML = (question);
         nerdButton.disabled = true;
     });
 
-    
+
      balls = true;
 
     function enemyAttack() {
@@ -90,7 +90,16 @@ function typewritergabagool(element, text, i = 0)
       console.log(damage);
     }
 
-    /* Question Gen */
+    /* 
+   ____                  _   _                _____ ______ _   _ 
+  / __ \                | | (_)              / ____|  ____| \ | |
+ | |  | |_   _  ___  ___| |_ _  ___  _ __   | |  __| |__  |  \| |
+ | |  | | | | |/ _ \/ __| __| |/ _ \| '_ \  | | |_ |  __| | . ` |
+ | |__| | |_| |  __/\__ \ |_| | (_) | | | | | |__| | |____| |\  |
+  \___\_\\__,_|\___||___/\__|_|\___/|_| |_|  \_____|______|_| \_|
+                                                                 
+                                                                 
+    */
     function questionGen() 
     {
         // this part generates the numbers for the problem.
@@ -106,16 +115,14 @@ function typewritergabagool(element, text, i = 0)
         // for debugging/testing
         answer = parseFloat(answerAfterRound);
         console.log(answer);
-        
-        
-        
-        
-        
       }
       if (balls == true)
         {
             imagechange();
         }
+
+
+
       function imagechange() {
         const images = ["aergg.png", "fuckyou.png"];
         const imageElement = document.querySelector(".zion");
@@ -126,6 +133,8 @@ function typewritergabagool(element, text, i = 0)
         }, 2000);
     }
 
+
+
       function randomArithmetic() {
         // this function randomly selects an operation from the array.
           const operations = ["+", "-", "*", "/"];
@@ -135,9 +144,9 @@ function typewritergabagool(element, text, i = 0)
         }
         const submit = document.querySelector(".submit").textContent;
         
-        submit.addEventListener("click", submit);
+        
 
-
+        const input = document.querySelector(".input1");
 
         function submitAnswer() {
           // this function checks if the answer is correct
