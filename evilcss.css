@@ -147,6 +147,15 @@ animation-iteration-count: infinite;
     background-color: #583411;
 }
 
+.enemyhealth
+{
+    width: 70%;
+    height: 4%;
+    margin-left: 15%;
+    margin-right: auto;
+    top: 0%;   
+    position: absolute;
+}
 progress {
     color: rgb(255, 252, 57);
     position: relative;
@@ -154,17 +163,18 @@ progress {
     margin-right: auto;
   }
   
-  progress::-moz-progress-bar {
+progress::-moz-progress-bar {
     background: rgb(248, 235, 55);
   }
-  .enemyhealth progress::-moz-progress-bar {
-    background: rgb(55, 161, 248);
-  }
   
-  progress::-webkit-progress-value {
+progress::-webkit-progress-value {
     background: red;
   }
   
-  progress::-webkit-progress-bar {
-    background: blue;
-  }
+.othercontainer 
+{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 100px;
+}
