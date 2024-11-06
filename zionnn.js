@@ -17,12 +17,14 @@ function playAudio() {
     }
 }
 /*   
-  _   _                              _ _                    __  __          _   
- | | (_)                            (_) |                  / _|/ _|        | |  
- | |_ _ _ __ ___   _____      ___ __ _| |_ ___ _ __    ___| |_| |_ ___  ___| |_ 
- | __| | '_ ` _ \ / _ \ \ /\ / / '__| | __/ _ \ '__|  / _ \  _|  _/ _ \/ __| __|
- | |_| | | | | | |  __/\ V  V /| |  | | ||  __/ |    |  __/ | | ||  __/ (__| |_ 
-  \__|_|_| |_| |_|\___| \_/\_/ |_|  |_|\__\___|_|     \___|_| |_| \___|\___|\__|
+  _                                  _ _                    __  __          _   
+ | |                                (_) |                  / _|/ _|        | |  
+ | |_ _   _ _ __   _____      ___ __ _| |_ ___ _ __    ___| |_| |_ ___  ___| |_ 
+ | __| | | | '_ \ / _ \ \ /\ / / '__| | __/ _ \ '__|  / _ \  _|  _/ _ \/ __| __|
+ | |_| |_| | |_) |  __/\ V  V /| |  | | ||  __/ |    |  __/ | | ||  __/ (__| |_ 
+  \__|\__, | .__/ \___| \_/\_/ |_|  |_|\__\___|_|     \___|_| |_| \___|\___|\__|
+       __/ | |                                                                  
+      |___/|_|                                                                  
                                                                                 
                                                                                 */
 const div = document.querySelector('.dialogtextOther p');
@@ -68,7 +70,9 @@ function typewritergabagool(element, text, i = 0)
     });
     
     nerdButton.addEventListener('click', () => {
-        let damage = enemyAttack(playerhealth); // Pass playerhealth to enemyAttack
+        let question = questionGen();
+        nerdButton.textContent = question;
+        nerdButton.disabled = true;
     });
     
 
@@ -95,7 +99,7 @@ function typewritergabagool(element, text, i = 0)
         answer = parseFloat(answerAfterRound);
         console.log(answer);
     
-        document.querySelector(".question").textContent = question;
+        document.querySelector("#question").textContent = question;
         
       }
 
@@ -106,6 +110,25 @@ function typewritergabagool(element, text, i = 0)
           const randomIndex = Math.floor(Math.random() * operations.length);
           return operations[randomIndex];
         }
-      
-    
-      
+        const submit = document.querySelector(".submit");
+        const question = document.querySelector("#question").textContent;
+        submit.addEventListener("click", submit);
+
+
+        
+        function submitAnswer() {
+          // this function checks if the answer is correct
+          if (input.value == answer) {
+            const currentQuestionNumber = parseInt(questionnumber.textContent.slice(8, 10));
+            const newQuestionNumber = currentQuestionNumber + 1;
+             questionnumber.textContent = `Question ${newQuestionNumber}`;
+            
+            questionGen(); }
+          else {
+            submit.classList.add('wrong-answer');
+          setTimeout(() => {
+            submit.classList.remove('wrong-answer');
+          }, 1200);
+          } 
+        }
+        

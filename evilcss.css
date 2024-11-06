@@ -81,6 +81,31 @@ body {
     box-shadow: 2px 2px 3px #4a0404;
 }
 
+.zionplayer {
+animation-name: wobble;
+animation-duration: 8s;
+animation-iteration-count: infinite;
+}
+
+
+@keyframes wobble {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    75% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+    
 .items 
 {
     
