@@ -52,3 +52,25 @@ function typewritergabagool(element, text, i = 0)
         playerhealth.value -= damage;
         return damage;
     }
+
+    /* Question Gen */
+    function questionGen() {
+        // this part generates the numbers for the problem.
+        const num1 = Math.floor(Math.random() * 100);
+        const num2 = Math.floor(Math.random() * 100);
+        const num3 = Math.floor(Math.random() * 100);
+        
+        const operation = randomArithmetic();
+        const question = `What is ${num1} ${operation} ${num2}?`;
+        //  Holds the answer to the question. (duh)
+        const answerBeforeRound =  eval(`${num1} ${operation} ${num2}`);
+        const answerAfterRound = answerBeforeRound.toFixed(1);
+        // for debugging/testing
+        answer = parseFloat(answerAfterRound);
+        console.log(answer);
+    
+        document.querySelector(".question").textContent = question;
+        
+      }
+    
+      
