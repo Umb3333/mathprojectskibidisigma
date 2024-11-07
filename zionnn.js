@@ -61,11 +61,11 @@ function typewritergabagool(element, text, i = 0)
            |___/                          
 */
 
-    const fightButton = document.querySelector('.fight');
-    const dialogTextOther = document.querySelector('.dialogtextOther');
-    const fightUI = document.querySelector('.fight-ui');
-    const nerdButton = document.querySelector('.nerd-button');
-    const playerhealth = document.querySelector(".playerhealth");
+const fightButton = document.querySelector('.fight');
+const dialogTextOther = document.querySelector('.dialogtextOther');
+const fightUI = document.querySelector('.fight-ui');
+const nerdButton = document.querySelector('.nerd-button');
+const playerhealth = document.querySelector(".playerhealth");
     
 fightButton.addEventListener('click', () => {
         if (fightUI.style.display === 'none') {
@@ -77,33 +77,23 @@ fightButton.addEventListener('click', () => {
             fightUI.style.display = 'none';
         }
     });
-    const question = document.querySelector(".questiontext h3");
+const question = document.querySelector(".questiontext h3");
     
-    const input1 = document.querySelector(".input1");
-    const submit = document.querySelector(".submit");
+const input1 = document.querySelector(".input1");
+const submit = document.querySelector(".submit");
 
-/*function showinput() {
 
-    if (input1.style.visibility === 'hidden') {
-        
-        $('.input1').css('visibility', 'visible');
-        $('.submit').css('display', '');
-    } 
-}*/
 const inputP = document.querySelector(".inputP");
 
 nerdButton.addEventListener('click', () => {
-          
-        let question = document.querySelector('questiontext');
-          question.textContent = questionGen();
+  console.log("hijfdrhjifde"); 
+  let question = document.querySelector('questiontext');
+  question.textContent = questionGen();
         
-        inputP.appendChild(input1);
-        //console.log("hijfdrhjifde");
-        
-        
-        
-        nerdButton.disabled = true;
-    });
+  document.querySelector('.inputP').style.top = '0%';
+  document.querySelector('.inputP').style.display = 'block';
+  nerdButton.disabled = true;
+});
 
 
 
