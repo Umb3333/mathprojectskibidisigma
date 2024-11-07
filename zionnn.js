@@ -8,11 +8,10 @@
                                | |             __/ |          
                                |_|            |___/           
 */
-
+const enemyhealth = document.querySelector('.enemyhealth');
 function playAudio() {
     var audio = new Audio('deathbyGLAMOUR.mp3');
     audio.play();
-    
 
     audio.onended = function() {
         this.play();
@@ -144,8 +143,9 @@ function questionGen()
         answer = parseFloat(answerAfterRound);
         console.log(answer);
         
-        typewritergabagool(div, text);
+        
         document.querySelector(".dialogtextOther").textContent = questionprint;
+        typewritergabagool(questionprint, document.querySelector(".questiontext"));
         
     }
       
@@ -157,14 +157,49 @@ function resetToMenu()
       dialogTextOther.innerHTML = '';
       
   }
+
+  function randomArithmetic() {
+    // this function randomly selects an operation from the array.
+      const operations = ["+", "-", "*", "/"];
+      //                  Rounds down ||  Random number || The amount of operations listed.
+      const randomIndex = Math.floor(Math.random() * operations.length);
+      return operations[randomIndex];
+    }
+    
+
+  /*
+  
+
+   _____       _               _ _                                          
+  / ____|     | |             (_) |       /\                                
+ | (___  _   _| |__  _ __ ___  _| |_     /  \   _ __  _____      _____ _ __ 
+  \___ \| | | | '_ \| '_ ` _ \| | __|   / /\ \ | '_ \/ __\ \ /\ / / _ \ '__|
+  ____) | |_| | |_) | | | | | | | |_   / ____ \| | | \__ \\ V  V /  __/ |   
+ |_____/ \__,_|_.__/|_| |_| |_|_|\__| /_/    \_\_| |_|___/ \_/\_/ \___|_|   
+                                                                            
+                                                                            
+
+
+  */ 
 function submitAnswer() {
       // this function checks if the answer is correct
       if (input1.value == answer) {
           attackenemy();
           resetToMenu();
+          
 
          }
          input1.value = "";
+         document.querySelector(".dialogtextOther").innerHTML = 'YEEOWWCH.... TAKE THIS NERDD';
+         typewritergabagool(div, text);
+         setTimeout(zionattackswipeskibidi, 3000);
+         
+         
+         
+    
+
+         
+         
       } 
 
       submit.addEventListener("click", submitAnswer);
@@ -175,7 +210,31 @@ function submitAnswer() {
         }
 
 
+function ziondeath () {
+  
+  
+  document.querySelector(".dialogtextOther").innerHTML = 'DAMN YOU NEERDDD';
+  document.querySelector('.zionplayer').style.animationName = 'death';
+  document.querySelector('.zionplayer').style.animationDuration = '3s';
 
+}
+
+
+
+/*
+
+
+  _____                               _____ _     _ _   
+ |_   _|                             / ____| |   (_) |  
+   | |  _ __ ___   __ _  __ _  ___  | (___ | |__  _| |_ 
+   | | | '_ ` _ \ / _` |/ _` |/ _ \  \___ \| '_ \| | __|
+  _| |_| | | | | | (_| | (_| |  __/  ____) | | | | | |_ 
+ |_____|_| |_| |_|\__,_|\__, |\___| |_____/|_| |_|_|\__|
+                         __/ |                          
+                        |___/                           
+
+
+*/ 
       function imagechange() {
         const images = ["aergg.png", "fuckingdies.png"];
         const imageElement = document.querySelector(".zion");
@@ -186,16 +245,32 @@ function submitAnswer() {
         }, 2000);
     }
 
+    function zionattackswipeskibidi() {
+      const images = ["SFX303_nyknck/01.png", "SFX303_nyknck/02.png", "SFX303_nyknck/03.png", "SFX303_nyknck/04.png", "SFX303_nyknck/05.png"];
+      const imageElement = document.querySelector(".zionSwipeImage");
+      let currentIndex = 0;
+      document.querySelector(".zionSwipeImage").style.visibility = "visible";
+    
+      function playAnimation() {
+        imageElement.src = images[currentIndex];
+        currentIndex = (currentIndex + 1) % images.length;
+        if (currentIndex !== 0) {
+          setTimeout(playAnimation, 100);
+          //document.querySelector(".zionSwipeImage").style.visibility = "hidden";
 
-
-      function randomArithmetic() {
-        // this function randomly selects an operation from the array.
-          const operations = ["+", "-", "*", "/"];
-          //                  Rounds down ||  Random number || The amount of operations listed.
-          const randomIndex = Math.floor(Math.random() * operations.length);
-          return operations[randomIndex];
         }
-        
+      }
+    
+      playAnimation();
+      enemyAttack();
+    }
+
+
+
+/* 
+Die = redirect to retry page
+win = redirect to win page (zionfuckingdies.html)
+*/ 
         
         
         

@@ -29,6 +29,7 @@ body {
     padding: 10px;
     border-radius: 10px;
     font-family: 'Determination Mono', sans-serif;
+    z-index: 1;
     
     color: rgb(0, 0, 0);
 }
@@ -40,6 +41,7 @@ body {
 
 .container {
   position: relative;
+  z-index: 1;
 }
 
 .mainBox {
@@ -58,6 +60,7 @@ body {
     max-width: 85%;
     max-height: 20%;
     padding: 20px;
+    z-index: 1;
 }
 
 .dialogtextOther, h3
@@ -134,6 +137,16 @@ animation-iteration-count: infinite;
     }
   }
     
+
+  @keyframes death {
+    0% {
+      transform: translateY(0);
+    }
+    
+    100% {
+      transform: translateY(-1000);
+    }
+  }
 .items 
 {
     
@@ -257,16 +270,26 @@ progress::-webkit-progress-value {
 
 
 
-/* Canvas Css */
+
 
 .zionattack {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: auto;
+    right: 5%;
+    top: 45%;
     width: 50%;
     height: 50%;
     pointer-events: none;
-    outline-style: solid;
-    outline-color: rgb(197, 118, 28);
+    visibility: hidden;
+    
     outline-width: 3px;
+    z-index: 2;
+}
+
+.zionSwipeImage {
+  scale: 14;
+  position: absolute;
+  z-index: 3;
+  
+  
 }
