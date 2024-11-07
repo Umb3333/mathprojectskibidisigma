@@ -186,22 +186,33 @@ function submitAnswer() {
       if (input1.value == answer) {
           attackenemy();
           resetToMenu();
+          zionattackswipeskibidi();
+          setTimeout(YEEOWWCH, 1000);
           
 
          }
          input1.value = "";
-         document.querySelector(".dialogtextOther").innerHTML = 'YEEOWWCH.... TAKE THIS NERDD';
+         setTimeout(damagekeyframe, 4000);
+         
+
+         setTimeout(clearback2menu, 1000);
+         function YEEOWWCH (){
+            document.querySelector(".dialogtextOther").innerHTML = 'YEEOWWCH.... TAKE THIS NERDD';
+         } 
+
+        
+         
+         
          typewritergabagool(div, text);
-         setTimeout(zionattackswipeskibidi, 3000);
          
-         
-         
-    
 
-         
-         
       } 
-
+      function clearback2menu () {
+        lines = ["You're starting to piss me off.", "BEHOLD THE POWER OF AN ANGEL", "RAAAAAAAAAAAGH",
+           "volp zolrp leep worp 'Faggot?' zarp zlirp", "jag när jag anväder mcree ult och ultar på skärmen"];
+        const randomline = Math.floor(Math.random() * lines.length);
+        document.querySelector(".dialogtextOther").innerHTML = lines[randomline];
+      }
       submit.addEventListener("click", submitAnswer);
     
       if (balls == true)
@@ -209,6 +220,20 @@ function submitAnswer() {
             imagechange();
         }
 
+
+  function damagekeyframe () 
+  {
+    document.querySelector(".mainBox", ".buttons").animate([
+      // key frames
+      { transform: 'translateX(0px)' },
+      { transform: 'translateX(50px)' },
+      { transform: 'translateX(-50px)' }
+    ], {
+      // sync options
+      duration: 50,
+      iterations: 7
+    });
+  }
 
 function ziondeath () {
   
