@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => { // skriven av Leo
     const voiceoverToggle = document.getElementById('voiceover-toggle');
 
     
