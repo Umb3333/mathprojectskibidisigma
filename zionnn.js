@@ -84,14 +84,21 @@ const submit = document.querySelector(".submit");
 
 
 const inputP = document.querySelector(".inputP");
+document.querySelector('.nerd-button').addEventListener('click', function() {
+  
+  document.querySelector('.inputP').style.left = '0%';
+  submit.style.left = '85%';
+  
+});
+
 
 nerdButton.addEventListener('click', () => {
   console.log("hijfdrhjifde"); 
   let question = document.querySelector('questiontext');
   question.textContent = questionGen();
         
-  document.querySelector('.inputP').style.top = '0%';
-  document.querySelector('.inputP').style.display = 'block';
+  
+  
   nerdButton.disabled = true;
 });
 
@@ -142,6 +149,21 @@ function questionGen()
         
     }
       
+    const submittext = document.querySelector(".submit");
+
+function submitAnswer() {
+      // this function checks if the answer is correct
+      if (input1.value = answer) {
+        
+          document.querySelector(".buttons").top = "-100%";
+          attackenemy();
+          
+         }
+      
+      } 
+
+      submit.addEventListener("click", submitAnswer);
+    
       if (balls == true)
         {
             imagechange();
@@ -150,7 +172,7 @@ function questionGen()
 
 
       function imagechange() {
-        const images = ["aergg.png", "fuckyou.png"];
+        const images = ["aergg.png", "fuckingdies.png"];
         const imageElement = document.querySelector(".zion");
         
         setInterval(() => {
@@ -171,19 +193,5 @@ function questionGen()
         
         
         
-        const submittext = document.querySelector(".submit").textContent;
-
-        function submitAnswer() {
-          // this function checks if the answer is correct
-          if (input.value == answer) {
-            
-            
-            questionGen(); }
-          else {
-            submittext.classList.add('wrong-answer');
-          setTimeout(() => {
-            submittext.classList.remove('wrong-answer');
-          }, 1200);
-          } 
-        }
+        
         

@@ -232,12 +232,24 @@ progress::-webkit-progress-value {
 
 .inputP 
 {
-  position: absolute;
+  position: relative;
     left: -100%;
 }
 
-
+.questiontext
+{
+    text-align: center;
+}
 .submit {
   font-family: 'Determination Mono', sans-serif;
-  display: none;
+  display: flex;
+  position: relative;
+  left: -100%;
+  bottom: 45px;
+  background-color: black;
+  color: rgb(197, 118, 28);
+  outline-color: rgb(197, 118, 28);
+  scale: 1.2;
+  padding: 2%;
+  border-radius: 5px;
 }
