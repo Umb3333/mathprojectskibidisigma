@@ -150,16 +150,21 @@ function questionGen()
     }
       
     const submittext = document.querySelector(".submit");
-
+function resetToMenu() 
+{
+      document.querySelector('.inputP').style.left = '-100%';
+      submit.style.left = '-100%';
+      dialogTextOther.innerHTML = '';
+      
+  }
 function submitAnswer() {
       // this function checks if the answer is correct
-      if (input1.value = answer) {
-        
-          document.querySelector(".buttons").top = "-100%";
+      if (input1.value == answer) {
           attackenemy();
-          
+          resetToMenu();
+
          }
-      
+         input1.value = "";
       } 
 
       submit.addEventListener("click", submitAnswer);

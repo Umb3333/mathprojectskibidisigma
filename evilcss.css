@@ -248,8 +248,25 @@ progress::-webkit-progress-value {
   bottom: 45px;
   background-color: black;
   color: rgb(197, 118, 28);
-  outline-color: rgb(197, 118, 28);
+  
   scale: 1.2;
   padding: 2%;
   border-radius: 5px;
+}
+
+
+
+
+/* Canvas Css */
+
+.zionattack {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 50%;
+    pointer-events: none;
+    outline-style: solid;
+    outline-color: rgb(197, 118, 28);
+    outline-width: 3px;
 }
