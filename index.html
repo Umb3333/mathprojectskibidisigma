@@ -38,25 +38,18 @@
     </div>
 
 
-    <script>
-        const optionsButton = document.querySelector('.options-button');
-        const dropdownHeader = document.querySelector('.dropdown-header');
+   <script>
+   const optionsButton = document.querySelector('.options-button');
+    const dropdownHeader = document.querySelector('.dropdown-header');
 
-        optionsButton.addEventListener('click', () => {
+    optionsButton.addEventListener('click', () => {
         dropdownHeader.classList.toggle('show');
-        });    
+    });   
 
-
-        document.getElementById('voiceover-toggle').addEventListener('change', function () {
-            if (this.checked) {
-                
-                console.log('Voiceover Mode Enabled');
-            } else {
-               
-                console.log('Voiceover Mode Disabled');
-            }
-        });
-    </script>
+   </script>
+         
+    <!--länkar till voice over scripten-->
+    <script src="voiceover.js"></script>
 
 </body>
 </html>
