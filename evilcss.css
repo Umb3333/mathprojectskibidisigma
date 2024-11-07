@@ -12,6 +12,9 @@
 body {
     background-color: black;
     font-family: 'Determination Mono', sans-serif;
+    margin: 0; 
+    height: 100%; 
+    overflow: hidden;
 }
 
 .zionplayer
@@ -132,6 +135,7 @@ animation-iteration-count: infinite;
 .fight-ui {
     text-align: center;
     margin-top: 20px;
+    display: none;
 }
 .nerd-button {
     font-family: 'Determination Mono', sans-serif;
@@ -160,8 +164,9 @@ animation-iteration-count: infinite;
 {
     width: 70%;
     height: 4%;
-    margin-left: 15%;
+    margin-left: auto;
     margin-right: auto;
+    left: 15%;
     top: 0%;   
     position: absolute;
 }
@@ -197,5 +202,24 @@ progress::-webkit-progress-value {
     outline-width: 6px;
     margin-left: auto;
     margin-right: auto;
+   visibility: hidden;   
+}
 
+.input1visible {
+  padding: 10px;
+    border-radius: 10px;
+    font-family: 'Determination Mono', sans-serif;
+    color: rgb(197, 118, 28);
+    outline-style: solid;
+    outline-width: 6px;
+    margin-left: auto;
+    margin-right: auto;
+   visibility: visible; 
+}
+
+
+
+.submit {
+  font-family: 'Determination Mono', sans-serif;
+  display: none;
 }

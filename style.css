@@ -10,10 +10,10 @@ body {
     
     position: relative;
     margin-left: auto;
-  margin-right: auto;
-    font-size: 50px;
+    margin-right: auto;
+    font-size: 120%;
     text-align: center;
-    max-width: 800px;
+    max-width: 90%;
     max-height: 400px;
     outline-style: solid;
     outline-color: rgb(0, 0, 0);
@@ -76,16 +76,16 @@ body {
     animation-duration: 4s;
     animation-name: verticalwobble;
     animation-iteration-count: infinite;
- background-color: rgb(238, 238, 238);
- margin: 10px;
- padding: 40px;
- outline-style: solid;
- outline-width: 3px;
- max-width: 600px;
- max-height: 600px;
- margin-left: auto;
- margin-right: auto;
- border-radius: 4px;
+    background-color: rgb(238, 238, 238);
+    margin: 10px;
+    padding: 40px;
+    outline-style: solid;
+    outline-width: 3px;
+    max-width: 600px;
+    max-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
 }
 
 @keyframes verticalwobble {
@@ -123,6 +123,7 @@ body {
     scale: 1;
     outline-style: solid;
     outline-width: 1px;
+    
 }
 
 .submit
@@ -144,7 +145,8 @@ body {
 /* options menu*/
 .optionsdropdown {
   position: fixed;
-  top: 20px;
+
+  top: 80%;
   right: 20px;
   display: inline-block;
 }

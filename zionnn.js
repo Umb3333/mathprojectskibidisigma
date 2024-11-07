@@ -12,6 +12,8 @@
 function playAudio() {
     var audio = new Audio('deathbyGLAMOUR.mp3');
     audio.play();
+    
+
     audio.onended = function() {
         this.play();
     }
@@ -27,7 +29,7 @@ function playAudio() {
       |___/|_|                                                                  
                                                                                 
                                                                                 */
-const div = document.querySelector('.dialogtextOther');
+const div = document.querySelector('.dialogtextOther p') || document.querySelector('.dialogtextOther h3');
 const text = div.textContent;
 function typewritergabagool(element, text, i = 0) 
 {
@@ -49,7 +51,14 @@ function typewritergabagool(element, text, i = 0)
 
 
 /* 
-
+  ______ _       _     _     _    _ _____ 
+ |  ____(_)     | |   | |   | |  | |_   _|
+ | |__   _  __ _| |__ | |_  | |  | | | |  
+ |  __| | |/ _` | '_ \| __| | |  | | | |  
+ | |    | | (_| | | | | |_  | |__| |_| |_ 
+ |_|    |_|\__, |_| |_|\__|  \____/|_____|
+            __/ |                         
+           |___/                          
 */
 
     const fightButton = document.querySelector('.fight');
@@ -58,7 +67,7 @@ function typewritergabagool(element, text, i = 0)
     const nerdButton = document.querySelector('.nerd-button');
     const playerhealth = document.querySelector(".playerhealth");
     
-    fightButton.addEventListener('click', () => {
+fightButton.addEventListener('click', () => {
         if (fightUI.style.display === 'none') {
             dialogTextOther.innerHTML = '';
             dialogTextOther.appendChild(nerdButton);
@@ -68,23 +77,45 @@ function typewritergabagool(element, text, i = 0)
             fightUI.style.display = 'none';
         }
     });
-    const question = document.querySelector(".dialogtextother h3");
-        nerdButton.addEventListener('click', () => {
-        let question = questionGen();
-        question.textContent = questionGen();
+    const question = document.querySelector(".questiontext h3");
+    
+    const input1 = document.querySelector(".input1");
+    const submit = document.querySelector(".submit");
+
+/*function showinput() {
+
+    if (input1.style.visibility === 'hidden') {
+        
+        $('.input1').css('visibility', 'visible');
+        $('.submit').css('display', '');
+    } 
+}*/
+const inputP = document.querySelector(".inputP");
+
+nerdButton.addEventListener('click', () => {
+          
+        let question = document.querySelector('questiontext');
+          question.textContent = questionGen();
+        
+        inputP.appendChild(input1);
+        //console.log("hijfdrhjifde");
+        
+        
+        
         nerdButton.disabled = true;
     });
 
 
-     balls = true;
 
-    function enemyAttack() {
+     balls = true;
+// Attack functions
+function enemyAttack() {
         let damage = parseFloat(Math.floor(Math.random() * 25) + 1);
         playerhealth.value -= damage;
         return damage;
     }
     
-    function attackenemy() {
+function attackenemy() {
       let damage = parseFloat(Math.floor(Math.random() * 25) + 1);
       document.querySelector(".enemyhealth").value -= damage;
       console.log(damage);
@@ -100,7 +131,7 @@ function typewritergabagool(element, text, i = 0)
                                                                  
                                                                  
     */
-    function questionGen() 
+function questionGen() 
     {
         // this part generates the numbers for the problem.
         const num1 = Math.floor(Math.random() * 100);
@@ -147,11 +178,10 @@ function typewritergabagool(element, text, i = 0)
           const randomIndex = Math.floor(Math.random() * operations.length);
           return operations[randomIndex];
         }
-        const submit = document.querySelector(".submit").textContent;
         
         
-
-        const input = document.querySelector(".input1");
+        
+        const submittext = document.querySelector(".submit").textContent;
 
         function submitAnswer() {
           // this function checks if the answer is correct
@@ -160,9 +190,9 @@ function typewritergabagool(element, text, i = 0)
             
             questionGen(); }
           else {
-            submit.classList.add('wrong-answer');
+            submittext.classList.add('wrong-answer');
           setTimeout(() => {
-            submit.classList.remove('wrong-answer');
+            submittext.classList.remove('wrong-answer');
           }, 1200);
           } 
         }
