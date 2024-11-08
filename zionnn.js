@@ -8,10 +8,11 @@
                                | |             __/ |          
                                |_|            |___/           
 */
-
+const enemyhealth = document.querySelector('.enemyhealth');
 function playAudio() {
     var audio = new Audio('deathbyGLAMOUR.mp3');
     audio.play();
+
     audio.onended = function() {
         this.play();
     }
@@ -27,7 +28,7 @@ function playAudio() {
       |___/|_|                                                                  
                                                                                 
                                                                                 */
-const div = document.querySelector('.dialogtextOther');
+const div = document.querySelector('.dialogtextOther p') || document.querySelector('.dialogtextOther h3');
 const text = div.textContent;
 function typewritergabagool(element, text, i = 0) 
 {
@@ -49,16 +50,23 @@ function typewritergabagool(element, text, i = 0)
 
 
 /* 
-
+  ______ _       _     _     _    _ _____ 
+ |  ____(_)     | |   | |   | |  | |_   _|
+ | |__   _  __ _| |__ | |_  | |  | | | |  
+ |  __| | |/ _` | '_ \| __| | |  | | | |  
+ | |    | | (_| | | | | |_  | |__| |_| |_ 
+ |_|    |_|\__, |_| |_|\__|  \____/|_____|
+            __/ |                         
+           |___/                          
 */
 
-    const fightButton = document.querySelector('.fight');
-    const dialogTextOther = document.querySelector('.dialogtextOther');
-    const fightUI = document.querySelector('.fight-ui');
-    const nerdButton = document.querySelector('.nerd-button');
-    const playerhealth = document.querySelector(".playerhealth");
+const fightButton = document.querySelector('.fight');
+const dialogTextOther = document.querySelector('.dialogtextOther');
+const fightUI = document.querySelector('.fight-ui');
+const nerdButton = document.querySelector('.nerd-button');
+const playerhealth = document.querySelector(".playerhealth");
     
-    fightButton.addEventListener('click', () => {
+fightButton.addEventListener('click', () => {
         if (fightUI.style.display === 'none') {
             dialogTextOther.innerHTML = '';
             dialogTextOther.appendChild(nerdButton);
@@ -68,23 +76,42 @@ function typewritergabagool(element, text, i = 0)
             fightUI.style.display = 'none';
         }
     });
-    const question = document.querySelector(".dialogtextother h3");
-        nerdButton.addEventListener('click', () => {
-        let question = questionGen();
-        question.textContent = questionGen();
-        nerdButton.disabled = true;
-    });
+const question = document.querySelector(".questiontext h3");
+    
+const input1 = document.querySelector(".input1");
+const submit = document.querySelector(".submit");
+
+
+const inputP = document.querySelector(".inputP");
+document.querySelector('.nerd-button').addEventListener('click', function() {
+  
+  document.querySelector('.inputP').style.left = '0%';
+  submit.style.left = '85%';
+  
+});
+
+
+nerdButton.addEventListener('click', () => {
+  console.log("hijfdrhjifde"); 
+  let question = document.querySelector('questiontext');
+  question.textContent = questionGen();
+        
+  
+  
+  nerdButton.disabled = true;
+});
+
 
 
      balls = true;
-
-    function enemyAttack() {
+// Attack functions
+function enemyAttack() {
         let damage = parseFloat(Math.floor(Math.random() * 25) + 1);
         playerhealth.value -= damage;
         return damage;
     }
     
-    function attackenemy() {
+function attackenemy() {
       let damage = parseFloat(Math.floor(Math.random() * 25) + 1);
       document.querySelector(".enemyhealth").value -= damage;
       console.log(damage);
@@ -100,7 +127,7 @@ function typewritergabagool(element, text, i = 0)
                                                                  
                                                                  
     */
-    function questionGen() 
+function questionGen() 
     {
         // this part generates the numbers for the problem.
         const num1 = Math.floor(Math.random() * 100);
@@ -116,20 +143,125 @@ function typewritergabagool(element, text, i = 0)
         answer = parseFloat(answerAfterRound);
         console.log(answer);
         
-        typewritergabagool(div, text);
+        
         document.querySelector(".dialogtextOther").textContent = questionprint;
+        typewritergabagool(questionprint, document.querySelector(".questiontext"));
         
     }
       
+    const submittext = document.querySelector(".submit");
+function resetToMenu() 
+{
+      document.querySelector('.inputP').style.left = '-100%';
+      submit.style.left = '-100%';
+      dialogTextOther.innerHTML = '';
+      
+  }
+
+  function randomArithmetic() {
+    // this function randomly selects an operation from the array.
+      const operations = ["+", "-", "*", "/"];
+      //                  Rounds down ||  Random number || The amount of operations listed.
+      const randomIndex = Math.floor(Math.random() * operations.length);
+      return operations[randomIndex];
+    }
+    
+
+  /*
+  
+
+   _____       _               _ _                                          
+  / ____|     | |             (_) |       /\                                
+ | (___  _   _| |__  _ __ ___  _| |_     /  \   _ __  _____      _____ _ __ 
+  \___ \| | | | '_ \| '_ ` _ \| | __|   / /\ \ | '_ \/ __\ \ /\ / / _ \ '__|
+  ____) | |_| | |_) | | | | | | | |_   / ____ \| | | \__ \\ V  V /  __/ |   
+ |_____/ \__,_|_.__/|_| |_| |_|_|\__| /_/    \_\_| |_|___/ \_/\_/ \___|_|   
+                                                                            
+                                                                            
+
+
+  */ 
+function submitAnswer() {
+      // this function checks if the answer is correct
+      if (input1.value == answer) {
+          attackenemy();
+          resetToMenu();
+          zionattackswipeskibidi();
+          setTimeout(YEEOWWCH, 1000);
+          
+
+         }
+         input1.value = "";
+         setTimeout(damagekeyframe, 4000);
+         
+
+         setTimeout(clearback2menu, 1000);
+         function YEEOWWCH (){
+            document.querySelector(".dialogtextOther").innerHTML = 'YEEOWWCH.... TAKE THIS NERDD';
+         } 
+
+        
+         
+         
+         typewritergabagool(div, text);
+         
+
+      } 
+      function clearback2menu () {
+        lines = ["You're starting to piss me off.", "BEHOLD THE POWER OF AN ANGEL", "RAAAAAAAAAAAGH",
+           "volp zolrp leep worp 'Faggot?' zarp zlirp", "jag när jag anväder mcree ult och ultar på skärmen"];
+        const randomline = Math.floor(Math.random() * lines.length);
+        document.querySelector(".dialogtextOther").innerHTML = lines[randomline];
+      }
+      submit.addEventListener("click", submitAnswer);
+    
       if (balls == true)
         {
             imagechange();
         }
 
 
+  function damagekeyframe () 
+  {
+    document.querySelector(".mainBox", ".buttons").animate([
+      // key frames
+      { transform: 'translateX(0px)' },
+      { transform: 'translateX(50px)' },
+      { transform: 'translateX(-50px)' }
+    ], {
+      // sync options
+      duration: 50,
+      iterations: 7
+    });
+  }
 
+function ziondeath () {
+  
+  
+  document.querySelector(".dialogtextOther").innerHTML = 'DAMN YOU NEERDDD';
+  document.querySelector('.zionplayer').style.animationName = 'death';
+  document.querySelector('.zionplayer').style.animationDuration = '3s';
+
+}
+
+
+
+/*
+
+
+  _____                               _____ _     _ _   
+ |_   _|                             / ____| |   (_) |  
+   | |  _ __ ___   __ _  __ _  ___  | (___ | |__  _| |_ 
+   | | | '_ ` _ \ / _` |/ _` |/ _ \  \___ \| '_ \| | __|
+  _| |_| | | | | | (_| | (_| |  __/  ____) | | | | | |_ 
+ |_____|_| |_| |_|\__,_|\__, |\___| |_____/|_| |_|_|\__|
+                         __/ |                          
+                        |___/                           
+
+
+*/ 
       function imagechange() {
-        const images = ["aergg.png", "fuckyou.png"];
+        const images = ["aergg.png", "fuckingdies.png"];
         const imageElement = document.querySelector(".zion");
         
         setInterval(() => {
@@ -138,32 +270,33 @@ function typewritergabagool(element, text, i = 0)
         }, 2000);
     }
 
+    function zionattackswipeskibidi() {
+      const images = ["SFX303_nyknck/01.png", "SFX303_nyknck/02.png", "SFX303_nyknck/03.png", "SFX303_nyknck/04.png", "SFX303_nyknck/05.png"];
+      const imageElement = document.querySelector(".zionSwipeImage");
+      let currentIndex = 0;
+      document.querySelector(".zionSwipeImage").style.visibility = "visible";
+    
+      function playAnimation() {
+        imageElement.src = images[currentIndex];
+        currentIndex = (currentIndex + 1) % images.length;
+        if (currentIndex !== 0) {
+          setTimeout(playAnimation, 100);
+          //document.querySelector(".zionSwipeImage").style.visibility = "hidden";
 
-
-      function randomArithmetic() {
-        // this function randomly selects an operation from the array.
-          const operations = ["+", "-", "*", "/"];
-          //                  Rounds down ||  Random number || The amount of operations listed.
-          const randomIndex = Math.floor(Math.random() * operations.length);
-          return operations[randomIndex];
         }
-        const submit = document.querySelector(".submit").textContent;
+      }
+    
+      playAnimation();
+      enemyAttack();
+    }
+
+
+
+/* 
+Die = redirect to retry page
+win = redirect to win page (zionfuckingdies.html)
+*/ 
         
         
-
-        const input = document.querySelector(".input1");
-
-        function submitAnswer() {
-          // this function checks if the answer is correct
-          if (input.value == answer) {
-            
-            
-            questionGen(); }
-          else {
-            submit.classList.add('wrong-answer');
-          setTimeout(() => {
-            submit.classList.remove('wrong-answer');
-          }, 1200);
-          } 
-        }
+        
         

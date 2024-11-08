@@ -15,7 +15,9 @@ function submitAnswer() {
     if (newQuestionNumber > 2) {
       window.location.replace("zionboss.html");
     }
-    questionGen(); }
+    questionGen(); 
+  
+  }
   else {
     submit.classList.add('wrong-answer');
   setTimeout(() => {
