@@ -229,7 +229,7 @@ function submitAnswer() {
       } 
       function clearback2menu () {
         lines = ["You're starting to piss me off.", "BEHOLD THE POWER OF AN ANGEL", "RAAAAAAAAAAAGH",
-           "volp zolrp leep worp 'Faggot?' zarp zlirp", "jag när jag anväder mcree ult och ultar på skärmen"];
+           "volp zolrp leep worp zarp zlirp"];
         const randomline = Math.floor(Math.random() * lines.length);
         document.querySelector(".dialogtextOther").innerHTML = lines[randomline];
       }
