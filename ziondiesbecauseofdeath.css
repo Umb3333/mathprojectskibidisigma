@@ -23,10 +23,10 @@ body {
 
 .image-container {
     position: relative;
-    animation: moveOffScreen 2s ease-in forwards;
+    animation: moveOffScreen 1s ease-in forwards;
 }
 
 @keyframes moveOffScreen {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(100vw); }
+    0% { transform: translateY(0); }
+    100% { transform: translateY(1000px); }
 }

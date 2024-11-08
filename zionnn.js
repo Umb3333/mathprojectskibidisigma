@@ -118,7 +118,12 @@ function attackenemy() {
       let damage = parseFloat(Math.floor(Math.random() * 25) + 1);
       document.querySelector(".enemyhealth").value -= damage;
       console.log(damage);
+      if (document.querySelector(".enemyhealth").value <= 0)
+        {
+            window.location.replace("zionfuckingdies.html");
+        } 
     }
+    
 
     /* 
    ____                  _   _                _____ ______ _   _ 
@@ -192,6 +197,7 @@ function submitAnswer() {
           zionattackswipeskibidi();
           setTimeout(YEEOWWCH, 1000);
           
+          
 
          }
          input1.value = "";
@@ -231,11 +237,13 @@ function submitAnswer() {
       { transform: 'translateX(0px)' },
       { transform: 'translateX(50px)' },
       { transform: 'translateX(-50px)' }
-    ], {
+    ], 
+     {
       // sync options
       duration: 10,
       iterations: 30
     });
+    enemyAttack();
   }
 
 function ziondeath () {
@@ -274,6 +282,10 @@ function ziondeath () {
     }
     const hidesprite = document.querySelector(".zionSwipeImage").style.visibility = "hidden";
 
+
+
+
+
     function zionattackswipeskibidi() {
       const images = ["SFX303_nyknck/01.png", "SFX303_nyknck/02.png", "SFX303_nyknck/03.png", "SFX303_nyknck/04.png", "SFX303_nyknck/05.png"];
       const imageElement = document.querySelector(".zionSwipeImage");
@@ -296,7 +308,7 @@ function ziondeath () {
       }
     
       playAnimation();
-      enemyAttack();
+      
     }
 
 
@@ -305,7 +317,5 @@ function ziondeath () {
 Die = redirect to retry page
 win = redirect to win page (zionfuckingdies.html)
 */ 
-        
-        
         
         

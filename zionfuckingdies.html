@@ -8,21 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="ziondiesbecauseofdeath.css">
 </head>
-<body>
+<body onload="playAudio();">
     <div class="image-container">
         <img src="aergg.png" alt="Boss Fight" id="animatedImage" width="200">
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const audio = new Audio('UUAAAAAH.mp3');
-            const image = document.getElementById('animatedImage');
-
-            
-            image.addEventListener('animationstart', () => {
-                audio.play();
-            });
-        });
-    </script>
+    <script src="ziondies.js"></script>
 </body>
 </html>
