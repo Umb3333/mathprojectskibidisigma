@@ -74,6 +74,9 @@ fightButton.addEventListener('click', () => {
         } else {
             nerdButton.remove();
             fightUI.style.display = 'none';
+            document.querySelector('.inputP').style.left = '-100%';
+            submit.style.left = '-100%';
+
         }
     });
 const question = document.querySelector(".questiontext h3");
@@ -230,8 +233,8 @@ function submitAnswer() {
       { transform: 'translateX(-50px)' }
     ], {
       // sync options
-      duration: 50,
-      iterations: 7
+      duration: 10,
+      iterations: 30
     });
   }
 
@@ -269,18 +272,24 @@ function ziondeath () {
             imageElement.src = images[randomimage];
         }, 2000);
     }
+    const hidesprite = document.querySelector(".zionSwipeImage").style.visibility = "hidden";
 
     function zionattackswipeskibidi() {
       const images = ["SFX303_nyknck/01.png", "SFX303_nyknck/02.png", "SFX303_nyknck/03.png", "SFX303_nyknck/04.png", "SFX303_nyknck/05.png"];
       const imageElement = document.querySelector(".zionSwipeImage");
       let currentIndex = 0;
+      function hidesprite() {
+        document.querySelector(".zionSwipeImage").style.visibility = "hidden";
+      }
       document.querySelector(".zionSwipeImage").style.visibility = "visible";
-    
+
       function playAnimation() {
         imageElement.src = images[currentIndex];
         currentIndex = (currentIndex + 1) % images.length;
         if (currentIndex !== 0) {
           setTimeout(playAnimation, 100);
+          setTimeout(hidesprite, 500);
+          
           //document.querySelector(".zionSwipeImage").style.visibility = "hidden";
 
         }
