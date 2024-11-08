@@ -107,15 +107,26 @@ nerdButton.addEventListener('click', () => {
 
 
      balls = true;
+
+
 // Attack functions
-function enemyAttack() {
+
+
+function enemyAttack(buff) {
+  if (document.querySelector(".playerhealth").value <= 0)
+    {
+          window.location.replace("retry.html");
+      } 
         let damage = parseFloat(Math.floor(Math.random() * 25) + 1);
         playerhealth.value -= damage;
         return damage;
-    }
     
+        
+    }
+    damage = parseFloat(Math.floor(Math.random() * 25) + 1); 
 function attackenemy() {
       let damage = parseFloat(Math.floor(Math.random() * 25) + 1);
+
       document.querySelector(".enemyhealth").value -= damage;
       console.log(damage);
       if (document.querySelector(".enemyhealth").value <= 0)
@@ -319,3 +330,53 @@ win = redirect to win page (zionfuckingdies.html)
 */ 
         
         
+/*
+
+
+  _____ _                     
+ |_   _| |                    
+   | | | |_ ___ _ __ ___  ___ 
+   | | | __/ _ \ '_ ` _ \/ __|
+  _| |_| ||  __/ | | | | \__ \
+ |_____|\__\___|_| |_| |_|___/
+                              
+                              
+
+
+*/ 
+
+
+const itembutton = document.querySelector(".items");
+const HPbutton = document.querySelector(".health-potion");
+const itemUI = document.querySelector(".item-ui");
+const DMGbutton = document.querySelector(".damage-potion");
+
+
+itembutton.addEventListener('click', () => {
+  if (itemUI.style.visibility === 'hidden') {
+      dialogTextOther.innerHTML = '';
+      dialogTextOther.appendChild(HPbutton);
+      dialogTextOther.appendChild(DMGbutton);
+      itemUI.style.visibility = 'visible';
+      itemUI.style.display = 'grid';
+      HPbutton.style.display = 'block';
+      
+      
+  } else {
+      HPbutton.style.visibility = 'hidden';
+      DMGbutton.style.visibility = 'hidden';
+      itemUI.style.display = 'none';
+  }
+});
+
+
+HPbutton.addEventListener('click', () => {
+  playerhealth.value += '5';
+  HPbutton.style.display = 'none';
+});
+function buff() {
+  DMGbutton.addEventListener('click', () => {
+    damage += '5';
+    DMGbutton.style.display = 'none';
+  });
+}
