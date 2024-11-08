@@ -21,9 +21,20 @@ body {
     align-items: center;
 }
 
+h1 {
+    color: rgb(197, 118, 28);
+    text-align: center;
+    position: relative;
+    font-size: 50px;
+    z-index: 2;
+    left: 20%;
+}
+
 .image-container {
     position: relative;
-    animation: moveOffScreen 1s ease-in forwards;
+    right: 25%;
+    animation: moveOffScreen 2s ease-in forwards;
+    z-index: 1;
 }
 
 @keyframes moveOffScreen {

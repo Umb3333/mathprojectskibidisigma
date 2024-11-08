@@ -289,7 +289,7 @@ progress::-webkit-progress-value {
     margin-left: auto;
     margin-right: auto;
     background-color: black;
-   visibility: visible;   
+    visibility: visible;   
 }
 
 .inputP 

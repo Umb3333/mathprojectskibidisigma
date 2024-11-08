@@ -1,4 +1,5 @@
 /* 
+I Emanuel wrote all of this
                     _ _               _                       
      /\            | (_)             | |                      
     /  \  _   _  __| |_  ___    _ __ | | __ _ _   _  ___ _ __ 
@@ -10,6 +11,7 @@
 */
 const enemyhealth = document.querySelector('.enemyhealth');
 function playAudio() {
+  // Music done by Emanuel
     var audio = new Audio('zionboss.mp3');
     audio.play();
 
@@ -67,11 +69,13 @@ const nerdButton = document.querySelector('.nerd-button');
 const playerhealth = document.querySelector(".playerhealth");
     
 fightButton.addEventListener('click', () => {
+  // This function appens the nerd button when the fight button is clicked
         if (fightUI.style.display === 'none') {
             dialogTextOther.innerHTML = '';
             dialogTextOther.appendChild(nerdButton);
             fightUI.style.display = 'block';
         } else {
+          // works as a toggle and removes when fight is clicked again
             nerdButton.remove();
             fightUI.style.display = 'none';
             document.querySelector('.inputP').style.left = '-100%';
@@ -84,7 +88,7 @@ const question = document.querySelector(".questiontext h3");
 const input1 = document.querySelector(".input1");
 const submit = document.querySelector(".submit");
 
-
+// moves the input box and submit button into view 
 const inputP = document.querySelector(".inputP");
 document.querySelector('.nerd-button').addEventListener('click', function() {
   
@@ -96,27 +100,32 @@ document.querySelector('.nerd-button').addEventListener('click', function() {
 
 nerdButton.addEventListener('click', () => {
   console.log("hijfdrhjifde"); 
+  // adds question text onto the screen
   let question = document.querySelector('questiontext');
   question.textContent = questionGen();
         
   
   
   nerdButton.disabled = true;
+  // removes button
 });
 
 
 
-     balls = true;
+     balls = true; // image
 
 
 // Attack functions
 
 
-function enemyAttack(buff) {
+function enemyAttack() {
+  // this function attacks the player
+  // If you die you're redirected to the retry page
   if (document.querySelector(".playerhealth").value <= 0)
     {
           window.location.replace("retry.html");
       } 
+      // damage is random number between 1 and 25 + 1
         let damage = parseFloat(Math.floor(Math.random() * 25) + 1);
         playerhealth.value -= damage;
         return damage;
@@ -125,14 +134,22 @@ function enemyAttack(buff) {
     }
     damage = parseFloat(Math.floor(Math.random() * 25) + 1); 
 function attackenemy() {
+  // this function attacks the enemy
+  //        Damage is a random number between 1 and 25 + 1
       let damage = parseFloat(Math.floor(Math.random() * 25) + 1);
 
       document.querySelector(".enemyhealth").value -= damage;
       console.log(damage);
+      // Redirects to the win page
       if (document.querySelector(".enemyhealth").value <= 0)
         {
-            window.location.replace("zionfuckingdies.html");
+           setTimeout(ziondeath, 10);
+           setTimeout(redirect, 2000);
         } 
+
+        function redirect () {
+          window.location.replace("zionfuckingdies.html");
+        }
     }
     
 
@@ -283,6 +300,7 @@ function ziondeath () {
 
 */ 
       function imagechange() {
+        //Randomly changes between these two images
         const images = ["aergg.png", "fuckingdies.png"];
         const imageElement = document.querySelector(".zion");
         
@@ -298,15 +316,18 @@ function ziondeath () {
 
 
     function zionattackswipeskibidi() {
+      // plays through the attack sprite animation (very iffy idk)
       const images = ["SFX303_nyknck/01.png", "SFX303_nyknck/02.png", "SFX303_nyknck/03.png", "SFX303_nyknck/04.png", "SFX303_nyknck/05.png"];
       const imageElement = document.querySelector(".zionSwipeImage");
       let currentIndex = 0;
       function hidesprite() {
+        // had an issue where the last image would stay on the screen after it is run. This makes sure to hide it
         document.querySelector(".zionSwipeImage").style.visibility = "hidden";
       }
       document.querySelector(".zionSwipeImage").style.visibility = "visible";
 
       function playAnimation() {
+        // this function plays through the attack animation
         imageElement.src = images[currentIndex];
         currentIndex = (currentIndex + 1) % images.length;
         if (currentIndex !== 0) {
@@ -351,7 +372,7 @@ const HPbutton = document.querySelector(".health-potion");
 const itemUI = document.querySelector(".item-ui");
 const DMGbutton = document.querySelector(".damage-potion");
 
-
+// Where items are stored, works the same as the fight button
 itembutton.addEventListener('click', () => {
   if (itemUI.style.visibility === 'hidden') {
       dialogTextOther.innerHTML = '';
@@ -363,18 +384,20 @@ itembutton.addEventListener('click', () => {
       
       
   } else {
+    //hides the items
       HPbutton.style.visibility = 'hidden';
       DMGbutton.style.visibility = 'hidden';
       itemUI.style.display = 'none';
   }
 });
 
-
+// potion adds 5hp
 HPbutton.addEventListener('click', () => {
   playerhealth.value += '5';
   HPbutton.style.display = 'none';
 });
 function buff() {
+  //doesnt work lol
   DMGbutton.addEventListener('click', () => {
     damage += '5';
     DMGbutton.style.display = 'none';
