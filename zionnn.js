@@ -10,7 +10,7 @@
 */
 const enemyhealth = document.querySelector('.enemyhealth');
 function playAudio() {
-    var audio = new Audio('deathbyGLAMOUR.mp3');
+    var audio = new Audio('zionboss.mp3');
     audio.play();
 
     audio.onended = function() {
