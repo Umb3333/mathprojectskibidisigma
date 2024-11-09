@@ -242,6 +242,9 @@ function submitAnswer() {
           
 
          }
+         else {
+          resetToMenu();
+         }
          input1.value = "";
          setTimeout(damagekeyframe, 3000);
          

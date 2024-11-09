@@ -18,48 +18,108 @@ body {
     overflow: hidden;
 }
 
-.container {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20%;
-    font-size: 50px;
-    text-align: center;
-    max-width: 800px;
-    max-height: 400px;
-    padding: 10px;
+@media only screen and (min-width: 801px) 
+{
+    .container {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20%;
+        right: -10%;
+        font-size: 50px;
+        text-align: center;
+        max-width: 800px;
+        max-height: 400px;
+        padding: 10px;
+    }
+    
+    .container h1 {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Determination Mono', sans-serif;
+        display: flex;
+        position: relative;
+        
+        
+        bottom: 300px;
+        background-color: black;
+        color: rgb(197, 118, 28);
+        
+    }
+    .retrybutton 
+    {
+      font-family: 'Determination Mono', sans-serif;
+      display: flex;
+      position: relative;
+      margin-top: 25%;
+      margin-left: auto;
+      margin-right: auto;
+      left: -20%;
+      bottom: 169px;
+      background-color: black;
+      color: rgb(197, 118, 28);
+      outline-style: solid;
+      outline-width: 12px;
+      
+      width: 26%;
+      text-align: center;
+      font-size: larger;
+      scale: 1.2;
+      padding: 4%;
+      
+    }
 }
 
-.container h1 {
-    margin-left: auto;
-    margin-right: auto;font-family: 'Determination Mono', sans-serif;
-    display: flex;
-    position: relative;
-    
-    
-    bottom: 45px;
-    background-color: black;
-    color: rgb(197, 118, 28);
-    
-}
-.retrybutton 
+
+@media (max-width: 768px) 
 {
-  font-family: 'Determination Mono', sans-serif;
-  display: flex;
-  position: relative;
-  margin-top: 30%;
-  margin-left: auto;
-  margin-right: auto;
-  bottom: 45px;
-  background-color: black;
-  color: rgb(197, 118, 28);
-  outline-style: solid;
-  outline-width: 8px;
-  
-  width: 50%;
-  text-align: center;
-  font-size: larger;
-  scale: 1.2;
-  padding: 8%;
-  
+    .container {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20%;
+        font-size: 50px;
+        text-align: center;
+        max-width: 800px;
+        max-height: 400px;
+        padding: 10px;
+    }
+    
+    .container h1 {
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Determination Mono', sans-serif;
+        display: flex;
+        position: relative;
+        
+        
+        bottom: 45px;
+        background-color: black;
+        color: rgb(197, 118, 28);
+        
+    }
+    .retrybutton 
+    {
+      font-family: 'Determination Mono', sans-serif;
+      display: flex;
+      position: relative;
+      margin-top: 30%;
+      margin-left: auto;
+      margin-right: auto;
+      bottom: 45px;
+      background-color: black;
+      color: rgb(197, 118, 28);
+      outline-style: solid;
+      outline-width: 10px;
+      
+      width: 50%;
+      text-align: center;
+      font-size: larger;
+      scale: 1.2;
+      padding: 4%;
+      
+    }
 }
+
+
