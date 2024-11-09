@@ -415,6 +415,7 @@ itembutton.addEventListener('click', () => {
       itemUI.style.visibility = 'visible';
       itemUI.style.display = 'grid';
       HPbutton.style.display = 'block';
+      DMGbutton.style.display = 'block';
       
       
   } else {
