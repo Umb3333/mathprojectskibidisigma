@@ -1,4 +1,33 @@
 @font-face {
+  font-family: 'Determination Mono';
+  src: url('webfonts/determinationmonoweb-webfont.eot');
+  src: url('webfonts/determinationmonoweb-webfont.eot?#iefix') format('embedded-opentype'),
+       url('webfonts/determinationmonoweb-webfont.woff2') format('woff2'),
+       url('webfonts/determinationmonoweb-webfont.woff') format('woff'),
+       url('webfonts/determinationmonoweb-webfont.ttf') format('truetype'),
+       url('webfonts/determinationmonoweb-webfont.svg#determination_mono_webregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+
+
+  _____  ______  _____ _  _________ ____  _____     _____  _____ _____ 
+ |  __ \|  ____|/ ____| |/ /__   __/ __ \|  __ \   / ____|/ ____/ ____|
+ | |  | | |__  | (___ | ' /   | | | |  | | |__) | | |    | (___| (___  
+ | |  | |  __|  \___ \|  <    | | | |  | |  ___/  | |     \___ \\___ \ 
+ | |__| | |____ ____) | . \   | | | |__| | |      | |____ ____) |___) |
+ |_____/|______|_____/|_|\_\  |_|  \____/|_|       \_____|_____/_____/ 
+                                                                       
+                                                                       
+
+
+*/
+
+@media only screen and (min-width: 801px) {
+
+  @font-face {
     font-family: 'Determination Mono';
     src: url('webfonts/determinationmonoweb-webfont.eot');
     src: url('webfonts/determinationmonoweb-webfont.eot?#iefix') format('embedded-opentype'),
@@ -30,7 +59,8 @@ body {
     border-radius: 10px;
     font-family: 'Determination Mono', sans-serif;
     z-index: 1;
-    
+    scale: 1;
+    overflow: hidden;
     color: rgb(0, 0, 0);
 }
 
@@ -338,7 +368,427 @@ progress::-webkit-progress-value {
 .zionSwipeImage {
   scale: 14;
   position: absolute;
-  z-index: 3;
+  z-index: 3;  
+}
+
+
+
+.cheatdropdown 
+{
+  font-family: 'Determination Mono', sans-serif;
+  
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 50%;
+  margin-top: 15%;
+  width: 50%;
+  background-color: black;
+  color: rgb(197, 118, 28);
+  outline-style: solid  ;
+  
+  padding: 2%;
+  border-radius: 5px;
+}
+
+#cheatbuttons {
+  font-family: 'Determination Mono', sans-serif;
+  display: flex;
+  position: relative;
+  
+  background-color: black;
+  color: rgb(197, 118, 28);
   
   
+  padding: 2%;
+  border-radius: 5px;
+}
+}
+
+
+
+/*
+
+
+  __  __  ____  ____ _____ _      ______    _____  _____ _____ 
+ |  \/  |/ __ \|  _ \_   _| |    |  ____|  / ____|/ ____/ ____|
+ | \  / | |  | | |_) || | | |    | |__    | |    | (___| (___  
+ | |\/| | |  | |  _ < | | | |    |  __|   | |     \___ \\___ \ 
+ | |  | | |__| | |_) || |_| |____| |____  | |____ ____) |___) |
+ |_|  |_|\____/|____/_____|______|______|  \_____|_____/_____/ 
+                                                               
+                                                               
+
+
+*/
+
+@media (max-width: 768px) {
+
+  
+body {
+    background-color: black;
+    font-family: 'Determination Mono', sans-serif;
+    margin: 0; 
+    height: 100%; 
+    overflow: hidden;
+}
+
+.zionplayer
+{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 50px;
+    text-align: center;
+    max-width: 800px;
+    max-height: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Determination Mono', sans-serif;
+    z-index: 1;
+    scale: 1;
+    overflow: hidden;
+    color: rgb(0, 0, 0);
+}
+
+.zionplayer img {
+    
+    max-block-size: 0%;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.item-ui 
+{
+    display: block;
+}
+
+.mainBox {
+    color: rgb(197, 118, 28);
+    outline-style: solid;
+    outline-width: 6px;
+    display: block;
+    flex-direction: row;
+    align-items: center;
+
+    font-family: 'Determination Mono', sans-serif;
+    
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 85%;
+    max-height: 20%;
+    padding: 20px;
+    z-index: 1;
+}
+
+.dialogtextOther, h3
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: large;
+    font-family: 'Determination Mono', sans-serif;
+    word-wrap: break-word;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 70%;
+    max-height: 70%;
+    
+}
+
+
+
+.buttons {
+    position-try: relative;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 90%;
+    max-height: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px auto;
+}
+.fight 
+{
+    
+    font-family: 'Determination Mono', sans-serif;
+    color: rgb(197, 118, 28);
+    outline-style: solid;
+    position: relative;
+    margin-left: 30%;
+    margin-right: auto;
+    
+    margin: 0 20px;
+    text-align: center;
+    min-width: 40%;
+    min-height: 10%;
+    padding: 30px;
+    background-color: black;
+    box-shadow: 0px 0px 0px; 
+    box-shadow: 2px 2px 3px #4a0404;
+}
+
+.zionplayer {
+animation-name: wobble;
+animation-duration: 8s;
+animation-iteration-count: infinite;
+}
+
+
+@keyframes wobble {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    75% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+    
+
+  @keyframes death {
+    0% {
+      transform: translateY(0);
+    }
+    
+    100% {
+      transform: translateY(-1000);
+    }
+  }
+.items 
+{
+  font-family: 'Determination Mono', sans-serif;
+    color: rgb(197, 118, 28);
+    outline-style: solid;
+    position: relative;
+    margin-left: 30%;
+    margin-right: auto;
+    
+    margin: 0 20px;
+    text-align: center;
+    min-width: 40%;
+    min-height: 10%;
+    padding: 30px;
+    background-color: black;
+    box-shadow: 0px 0px 0px; 
+    box-shadow: 2px 2px 3px #4a0404;  
+}   
+
+.items-ui 
+{
+  text-align: center;
+    margin-top: 20px;
+    display: none;
+}
+
+.damage-potion 
+{
+  font-family: 'Determination Mono', sans-serif;
+  background-color: #000000;
+  color: rgb(197, 118, 28);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 2;
+  display: none;  
+}
+
+.damage-potion:hover {  
+  background-color: #583411;
+}
+
+.health-potion 
+{
+  font-family: 'Determination Mono', sans-serif;
+  background-color: #000000;
+  color: rgb(197, 118, 28);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 2;
+  display: none;  
+}
+
+.health-potion:hover {  
+  background-color: #583411;
+}
+
+.fight-ui {
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+    
+}
+.nerd-button {
+    font-family: 'Determination Mono', sans-serif;
+    background-color: #000000;
+    color: rgb(197, 118, 28);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.nerd-button:hover {
+    background-color: #583411;
+}
+.playerhealth 
+{
+  right: 20%;
+  width: 40%;
+  height: 7%;
+  margin-left: auto;
+  margin-right: 9%;
+  top: 105%;   
+  position: absolute;
+}
+.enemyhealth
+{
+    width: 70%;
+    height: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 15%;
+    top: 0%;   
+    position: absolute;
+}
+progress {
+    color: rgb(255, 252, 57);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(255, 101, 101);
+  }
+  
+progress::-moz-progress-bar {
+    background: rgb(248, 235, 55);
+  }
+progress::-moz-progress-bar-background {
+    background: rgb(255, 81, 81);
+  }
+  
+progress::-webkit-progress-value {
+    background: red;
+  }
+  
+.othercontainer 
+{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 100px;
+}
+
+.input1 {
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Determination Mono', sans-serif;
+    color: rgb(197, 118, 28);
+    outline-style: solid;
+    outline-width: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    visibility: visible;   
+}
+
+.inputP 
+{
+  position: relative;
+    left: -100%;
+}
+
+.questiontext
+{
+    text-align: center;
+}
+.submit {
+  font-family: 'Determination Mono', sans-serif;
+  display: flex;
+  position: relative;
+  left: -100%;
+  bottom: 45px;
+  background-color: black;
+  color: rgb(197, 118, 28);
+  
+  scale: 1.2;
+  padding: 2%;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+.zionattack {
+    position: absolute;
+    left: auto;
+    right: 5%;
+    top: 45%;
+    width: 50%;
+    height: 50%;
+    pointer-events: none;
+    visibility: hidden;
+    
+    outline-width: 3px;
+    z-index: 2;
+}
+
+.zionSwipeImage {
+  scale: 14;
+  position: absolute;
+  z-index: 3;  
+}
+
+
+
+.cheatdropdown 
+{
+  font-family: 'Determination Mono', sans-serif;
+  
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 50%;
+  margin-top: 15%;
+  width: 50%;
+  background-color: black;
+  color: rgb(197, 118, 28);
+  outline-style: solid  ;
+  
+  padding: 2%;
+  border-radius: 5px;
+}
+
+#cheatbuttons {
+  font-family: 'Determination Mono', sans-serif;
+  display: flex;
+  position: relative;
+  
+  background-color: black;
+  color: rgb(197, 118, 28);
+  
+  
+  padding: 2%;
+  border-radius: 5px;
+}
+
 }

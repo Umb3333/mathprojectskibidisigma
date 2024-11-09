@@ -167,7 +167,7 @@ function questionGen()
     {
         // this part generates the numbers for the problem.
         const num1 = Math.floor(Math.random() * 100);
-        const num2 = Math.floor(Math.random() * 100);
+        const num2 = Math.floor(Math.random() * 10);
         const num3 = Math.floor(Math.random() * 100);
         
         const operation = randomArithmetic();
@@ -303,10 +303,28 @@ function ziondeath () {
         //Randomly changes between these two images
         const images = ["aergg.png", "fuckingdies.png"];
         const imageElement = document.querySelector(".zion");
+        function imagescaler() 
+        {
+          if (imageElement.src === images[1]) 
+            {
+              imageElement.style.scale = "0.5";
+              console.log("scale Test")
+            }
+      }
         
         setInterval(() => {
             const randomimage = Math.floor(Math.random() * images.length);
+            imagescaler();
             imageElement.src = images[randomimage];
+            if (imageElement.src === images[1]) 
+              {
+                imageElement.style.scale = "0.5";
+                console.log("scale Test")
+              }
+              else if (imageElement.src === images[0]) 
+              {
+                imageElement.style.scale = "1";
+              }
         }, 2000);
     }
     const hidesprite = document.querySelector(".zionSwipeImage").style.visibility = "hidden";
@@ -402,4 +420,60 @@ function buff() {
     damage += '5';
     DMGbutton.style.display = 'none';
   });
+}
+
+
+
+
+
+
+document.querySelector(".input1").addEventListener("keyup", function(event) 
+{
+  event.preventDefault();
+  if (event.keyCode === 13) {
+      document.querySelector(".submit").click();  
+  }
+});
+
+// a key map of allowed keys
+var allowedKeys = {
+37: 'left',
+38: 'up',
+39: 'right',
+40: 'down',
+65: 'a',
+66: 'b'
+};
+
+// the 'official' Konami Code sequence
+var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
+
+// a variable to remember the 'position' the user has reached so far.
+var konamiCodePosition = 0;
+
+// add keydown event listener
+document.addEventListener('keydown', function(e) {
+// get the value of the key code from the key map
+var key = allowedKeys[e.keyCode];
+// get the value of the required key from the konami code
+var requiredKey = konamiCode[konamiCodePosition];
+
+// compare the key with the required key
+if (key == requiredKey) {
+
+  // move to the next key in the konami code sequence
+  konamiCodePosition++;
+
+  // if the last key is reached, activate cheats
+  if (konamiCodePosition == konamiCode.length) {
+    activateCheats();
+    konamiCodePosition = 0;
+  }
+} else {
+  konamiCodePosition = 0;
+}
+});
+
+function activateCheats() {
+document.querySelector(".cheatdropdown").style.display = 'grid';
 }

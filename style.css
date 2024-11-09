@@ -1,9 +1,15 @@
 /* Main website | Emanuel wrote most of this */ 
 body {
     background-color: rgb(120, 144, 156);
-    font-family: "Bangers", system-ui;
-    font-weight: 400;
+    font-family: "Galindo", system-ui;
+    font-weight: 100;
     font-style: normal;
+}
+
+.galindo-regular {
+  font-family: "Galindo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .menutext {
@@ -20,7 +26,7 @@ body {
     outline-width: 2px;
     padding: 10px;
     border-radius: 10px;
-    font-family: 'Bangers', sans-serif;
+    font-family: 'Galindo', sans-serif;
     background-color: rgb(205, 241, 137);
     color: rgb(0, 0, 0);
 }
@@ -37,7 +43,7 @@ body {
     text-decoration: none;
     padding: 20px;
     font-size: 30px;
-    font-family: 'Bangers', sans-serif;
+    font-family: 'Galindo', sans-serif;
     background-color: rgb(205, 241, 137);
     color: rgb(0, 0, 0);
     border-radius: 10px;
@@ -62,7 +68,7 @@ body {
     outline-width: 2px;
     padding: 10px;
     border-radius: 10px;
-    font-family: 'Bangers', sans-serif;
+    font-family: 'Galindo', sans-serif;
     background-color: rgb(205, 241, 137);
     color: rgb(0, 0, 0);
 }
@@ -129,6 +135,7 @@ body {
     font-size: 30px;
     border-radius: 10px;
     scale: 1;   
+    font-family: "Galindo", system-ui;
 }
 
 .wrong-answer {
@@ -152,7 +159,7 @@ body {
   color: white;
   padding: 10px 20px;
   font-size: 20px;
-  font-family: 'Bangers', sans-serif;
+  font-family: 'Galindo', sans-serif;
   border: none;
   border-radius: 4px;
   cursor: pointer;
