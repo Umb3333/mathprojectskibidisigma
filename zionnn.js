@@ -74,6 +74,7 @@ fightButton.addEventListener('click', () => {
             dialogTextOther.innerHTML = '';
             dialogTextOther.appendChild(nerdButton);
             fightUI.style.display = 'block';
+            nerdButton.disabled = false;
             
         } else {
           // works as a toggle and removes when fight is clicked again
@@ -242,7 +243,7 @@ function submitAnswer() {
 
          }
          input1.value = "";
-         setTimeout(damagekeyframe, 4000);
+         setTimeout(damagekeyframe, 3000);
          
 
          setTimeout(clearback2menu, 1000);
@@ -291,7 +292,7 @@ function ziondeath () {
   
   
   document.querySelector(".dialogtextOther").innerHTML = 'DAMN YOU NEERDDD';
-  document.querySelector('.zionplayer').style.animationName = 'death';
+  
   document.querySelector('.zionplayer').style.animationDuration = '3s';
 
 }
@@ -503,4 +504,14 @@ instakill.addEventListener('click', () => {
   enemyhealth.value = -1;
   window.location.replace("zionfuckingdies.html");
  
+});
+
+solvequestion.addEventListener('click', () => {
+  input1.value = answer;
+  submitAnswer();
+ 
+});
+
+fullheal.addEventListener('click', () => {
+  playerhealth.value = 100;
 });
