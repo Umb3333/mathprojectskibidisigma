@@ -74,6 +74,7 @@ fightButton.addEventListener('click', () => {
             dialogTextOther.innerHTML = '';
             dialogTextOther.appendChild(nerdButton);
             fightUI.style.display = 'block';
+            
         } else {
           // works as a toggle and removes when fight is clicked again
             nerdButton.remove();
@@ -101,8 +102,11 @@ document.querySelector('.nerd-button').addEventListener('click', function() {
 nerdButton.addEventListener('click', () => {
   console.log("hijfdrhjifde"); 
   // adds question text onto the screen
-  let question = document.querySelector('questiontext');
-  question.textContent = questionGen();
+  let question = document.querySelector('.dialogtextOther');
+  question.textContent = '';
+  typewritergabagool(question, questionGen());
+  
+  
         
   
   
@@ -116,6 +120,11 @@ nerdButton.addEventListener('click', () => {
 
 
 // Attack functions
+
+
+if (enemyhealth.value <= 0) {
+  window.location.replace("zionfuckingdies.html");
+}
 
 
 function enemyAttack() {
@@ -133,6 +142,10 @@ function enemyAttack() {
         
     }
     damage = parseFloat(Math.floor(Math.random() * 25) + 1); 
+
+    
+        
+    
 function attackenemy() {
   // this function attacks the enemy
   //        Damage is a random number between 1 and 25 + 1
@@ -180,8 +193,8 @@ function questionGen()
         console.log(answer);
         
         
-        document.querySelector(".dialogtextOther").textContent = questionprint;
-        typewritergabagool(questionprint, document.querySelector(".questiontext"));
+        return questionprint;
+        
         
     }
       
@@ -396,6 +409,8 @@ itembutton.addEventListener('click', () => {
       dialogTextOther.innerHTML = '';
       dialogTextOther.appendChild(HPbutton);
       dialogTextOther.appendChild(DMGbutton);
+      HPbutton.style.visibility = 'visible';
+      DMGbutton.style.visibility = 'visible';
       itemUI.style.visibility = 'visible';
       itemUI.style.display = 'grid';
       HPbutton.style.display = 'block';
@@ -411,7 +426,7 @@ itembutton.addEventListener('click', () => {
 
 // potion adds 5hp
 HPbutton.addEventListener('click', () => {
-  playerhealth.value += '5';
+  playerhealth.value += 10;
   HPbutton.style.display = 'none';
 });
 function buff() {
@@ -475,5 +490,17 @@ if (key == requiredKey) {
 });
 
 function activateCheats() {
+
 document.querySelector(".cheatdropdown").style.display = 'grid';
+
 }
+
+const instakill = document.querySelector(".instakill") 
+const solvequestion = document.querySelector(".solvequestion") 
+const fullheal = document.querySelector(".fullheal") 
+
+instakill.addEventListener('click', () => {
+  enemyhealth.value = -1;
+  window.location.replace("zionfuckingdies.html");
+ 
+});

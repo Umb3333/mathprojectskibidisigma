@@ -103,5 +103,5 @@ document.addEventListener('keydown', function(e) {
 });
 
 function activateCheats() {
-  alert("bomberclart")
+  alert(answer);
 }
