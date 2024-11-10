@@ -372,6 +372,13 @@ progress::-webkit-progress-value {
   border-radius: 6px;
 }
 
+.enemyhealthtext {
+  position: relative;
+  left: 10%;
+  color: rgb(197, 118, 28);
+  top: 40%;
+}
+
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;

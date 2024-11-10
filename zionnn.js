@@ -148,7 +148,11 @@ function enemyAttack() {
     }
     damage = parseFloat(Math.floor(Math.random() * 25) + 1); 
 
-    
+    function enemyhealthdisplay () {
+      document.querySelector(".enemyhealth").value = enemyhealth.value;
+      document.querySelector(".enemyhealthtext").textContent = `${enemyhealth.value} " / 100"`;
+      
+    }
         
     
 function attackenemy() {
