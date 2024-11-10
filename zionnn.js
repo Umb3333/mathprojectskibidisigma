@@ -18,6 +18,10 @@ function playAudio() {
     audio.onended = function() {
         this.play();
     }
+    let volume = document.getElementById('myRange');
+    volume.addEventListener("change", function(e) {
+    audio.volume = e.currentTarget.value / 100;
+})
 }
 /*   
   _                                  _ _                    __  __          _   
@@ -519,3 +523,7 @@ solvequestion.addEventListener('click', () => {
 fullheal.addEventListener('click', () => {
   playerhealth.value = 100;
 });
+
+
+
+
