@@ -368,6 +368,7 @@ function ziondeath () {
       const images = ["SFX303_nyknck/01.png", "SFX303_nyknck/02.png", "SFX303_nyknck/03.png", "SFX303_nyknck/04.png", "SFX303_nyknck/05.png"];
       const imageElement = document.querySelector(".zionSwipeImage");
       let currentIndex = 0;
+
       function hidesprite() {
         // had an issue where the last image would stay on the screen after it is run. This makes sure to hide it
         document.querySelector(".zionSwipeImage").style.visibility = "hidden";
@@ -449,6 +450,7 @@ HPbutton.addEventListener('click', () => {
 });
 
   //doesnt work lol
+ 
   DMGbutton.addEventListener('click', () => {
       damagebuff = true;
       DMGbutton.style.visibility = 'hidden';
