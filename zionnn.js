@@ -146,8 +146,9 @@ function enemyAttack() {
     
         
     }
+    let damagebuff = false;
     damage = parseFloat(Math.floor(Math.random() * 25) + 1); 
-
+    
     function enemyhealthdisplay () {
       document.querySelector(".enemyhealth").value = enemyhealth.value;
       document.querySelector(".enemyhealthtext").textContent = `${enemyhealth.value} " / 100"`;
@@ -159,7 +160,11 @@ function attackenemy() {
   // this function attacks the enemy
   //        Damage is a random number between 1 and 25 + 1
       let damage = parseFloat(Math.floor(Math.random() * 25) + 1);
-
+      if (damagebuff == true) {
+        damage += 10;
+      }
+  
+      console.log(damage);
       document.querySelector(".enemyhealth").value -= damage;
       console.log(damage);
       // Redirects to the win page
@@ -422,7 +427,7 @@ itembutton.addEventListener('click', () => {
       dialogTextOther.appendChild(HPbutton);
       dialogTextOther.appendChild(DMGbutton);
       HPbutton.style.visibility = 'visible';
-      DMGbutton.style.visibility = 'visible';
+      // DMGbutton.style.visibility = 'visible';
       itemUI.style.visibility = 'visible';
       itemUI.style.display = 'grid';
       HPbutton.style.display = 'block';
@@ -442,13 +447,15 @@ HPbutton.addEventListener('click', () => {
   playerhealth.value += 10;
   HPbutton.style.display = 'none';
 });
-function buff() {
+
   //doesnt work lol
   DMGbutton.addEventListener('click', () => {
-    damage += '5';
-    DMGbutton.style.display = 'none';
+      damagebuff = true;
+      DMGbutton.style.visibility = 'hidden';
+      DMGbutton.style.display = 'none';
+      console.log("do you");
   });
-}
+
 
 
 
