@@ -120,6 +120,10 @@ body {
     left: 50%;
     transform: translateX(-50%);
 }
+
+
+
+
 .fight 
 {
     font-family: 'Determination Mono', sans-serif;
@@ -145,12 +149,13 @@ body {
     color: rgb(197, 118, 28);
     outline-style: solid;
     position: relative;
-    margin-left: -3%;
+    margin-left: -5%;
+    font-size: 222%;
     margin-right: auto;
-
+    /* transform: scale(1.25); */
     
     text-align: center;
-    min-width: 38%;
+    min-width: 40%;
     min-height: 10%;
     padding: 30px;
     background-color: black;
